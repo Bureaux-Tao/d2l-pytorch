@@ -1,0 +1,186 @@
+/Users/Bureaux/miniconda3/envs/Torch-base/bin/python "/Users/Bureaux/Library/Application Support/JetBrains/Toolbox/apps/PyCharm-P/ch-0/212.5457.59/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevconsole.py" --mode=client --port=50419
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['/Users/Bureaux/Documents/workspace/PyCharmProjects/TorchProject'])
+Python 3.7.10 (default, Feb 26 2021, 10:16:00)
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.25.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.25.0
+Python 3.7.10 (default, Feb 26 2021, 10:16:00)
+[Clang 10.0.0 ] on darwin
+In[2]: runfile('/Users/Bureaux/Documents/workspace/PyCharmProjects/TorchProject/src/ch3/ch3_5.py', wdir='/Users/Bureaux/Documents/workspace/PyCharmProjects/TorchProject/src/ch3')
+/Users/Bureaux/miniconda3/envs/Torch-base/lib/python3.7/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:180.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+train_loader的batch数量为： 3750
+test_data_x.shape: torch.Size([10000, 1, 28, 28])
+test_data_y.shape: torch.Size([10000])
+ConvNet(
+  (conv1): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1))
+    (1): ReLU()
+    (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1152, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=128, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
+Epoch [0/30]: 100%|██████████| 3750/3750 [00:42<00:00, 87.53it/s, acc=0.731, loss=0.73]
+Train Loss:0.7296  Train Acc: 0.7310
+Val Loss:0.5334  Val Acc:0.7972
+Train and val complete in 0m 43s
+Epoch [1/30]: 100%|██████████| 3750/3750 [00:45<00:00, 82.41it/s, acc=0.81, loss=0.502]
+Train Loss:0.5016  Train Acc: 0.8101
+Val Loss:0.4621  Val Acc:0.8290
+Train and val complete in 1m 28s
+Epoch [2/30]: 100%|██████████| 3750/3750 [00:39<00:00, 93.97it/s, acc=0.838, loss=0.444]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.4438  Train Acc: 0.8375
+Val Loss:0.4208  Val Acc:0.8476
+Train and val complete in 2m 8s
+Epoch [3/30]: 100%|██████████| 3750/3750 [00:40<00:00, 91.55it/s, acc=0.851, loss=0.407]
+Train Loss:0.4074  Train Acc: 0.8511
+Val Loss:0.3939  Val Acc:0.8581
+Train and val complete in 2m 49s
+Epoch [4/30]: 100%|██████████| 3750/3750 [00:44<00:00, 83.84it/s, acc=0.861, loss=0.381]
+Train Loss:0.3814  Train Acc: 0.8612
+Val Loss:0.3750  Val Acc:0.8658
+Train and val complete in 3m 34s
+Epoch [5/30]: 100%|██████████| 3750/3750 [00:43<00:00, 86.94it/s, acc=0.869, loss=0.361]
+Train Loss:0.3608  Train Acc: 0.8687
+Val Loss:0.3612  Val Acc:0.8700
+Train and val complete in 4m 17s
+Epoch [6/30]: 100%|██████████| 3750/3750 [00:43<00:00, 85.42it/s, acc=0.875, loss=0.344]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.3437  Train Acc: 0.8746
+Val Loss:0.3518  Val Acc:0.8734
+Train and val complete in 5m 1s
+Epoch [7/30]: 100%|██████████| 3750/3750 [00:42<00:00, 88.79it/s, acc=0.879, loss=0.329]
+Train Loss:0.3292  Train Acc: 0.8793
+Val Loss:0.3447  Val Acc:0.8747
+Train and val complete in 5m 43s
+Epoch [8/30]: 100%|██████████| 3750/3750 [00:47<00:00, 79.32it/s, acc=0.884, loss=0.316]
+Train Loss:0.3164  Train Acc: 0.8837
+Val Loss:0.3383  Val Acc:0.8759
+Train and val complete in 6m 31s
+Epoch [9/30]: 100%|██████████| 3750/3750 [00:41<00:00, 90.93it/s, acc=0.888, loss=0.306]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.3055  Train Acc: 0.8876
+Val Loss:0.3323  Val Acc:0.8776
+Train and val complete in 7m 12s
+Epoch [10/30]: 100%|██████████| 3750/3750 [00:44<00:00, 84.58it/s, acc=0.891, loss=0.296]
+Train Loss:0.2959  Train Acc: 0.8910
+Val Loss:0.3248  Val Acc:0.8808
+Train and val complete in 7m 56s
+Epoch [11/30]: 100%|██████████| 3750/3750 [00:46<00:00, 80.28it/s, acc=0.895, loss=0.287]
+Train Loss:0.2869  Train Acc: 0.8948
+Val Loss:0.3199  Val Acc:0.8825
+Train and val complete in 8m 43s
+Epoch [12/30]: 100%|██████████| 3750/3750 [00:41<00:00, 90.58it/s, acc=0.898, loss=0.279]
+Train Loss:0.2788  Train Acc: 0.8979
+Val Loss:0.3149  Val Acc:0.8847
+Train and val complete in 9m 24s
+Epoch [13/30]: 100%|██████████| 3750/3750 [00:44<00:00, 84.97it/s, acc=0.9, loss=0.271]
+Train Loss:0.2713  Train Acc: 0.9002
+Val Loss:0.3091  Val Acc:0.8869
+Train and val complete in 10m 9s
+Epoch [14/30]: 100%|██████████| 3750/3750 [00:42<00:00, 88.50it/s, acc=0.903, loss=0.264]
+Train Loss:0.2642  Train Acc: 0.9027
+Val Loss:0.3028  Val Acc:0.8878
+Train and val complete in 10m 51s
+Epoch [15/30]: 100%|██████████| 3750/3750 [00:37<00:00, 98.81it/s, acc=0.906, loss=0.257]
+Train Loss:0.2574  Train Acc: 0.9058
+Val Loss:0.2989  Val Acc:0.8902
+Train and val complete in 11m 29s
+Epoch [16/30]: 100%|██████████| 3750/3750 [00:44<00:00, 83.78it/s, acc=0.908, loss=0.251]
+Train Loss:0.2512  Train Acc: 0.9078
+Val Loss:0.2928  Val Acc:0.8941
+Train and val complete in 12m 14s
+Epoch [17/30]: 100%|██████████| 3750/3750 [00:38<00:00, 98.22it/s, acc=0.91, loss=0.245]
+Train Loss:0.2453  Train Acc: 0.9095
+Val Loss:0.2881  Val Acc:0.8969
+Train and val complete in 12m 52s
+Epoch [18/30]: 100%|██████████| 3750/3750 [00:48<00:00, 77.32it/s, acc=0.911, loss=0.239]
+Train Loss:0.2394  Train Acc: 0.9115
+Val Loss:0.2851  Val Acc:0.8985
+Train and val complete in 13m 40s
+Epoch [19/30]: 100%|██████████| 3750/3750 [00:49<00:00, 76.15it/s, acc=0.914, loss=0.234]
+Train Loss:0.2340  Train Acc: 0.9144
+Val Loss:0.2822  Val Acc:0.9001
+Train and val complete in 14m 30s
+Epoch [20/30]: 100%|██████████| 3750/3750 [00:44<00:00, 85.01it/s, acc=0.916, loss=0.229]
+Train Loss:0.2287  Train Acc: 0.9163
+Val Loss:0.2782  Val Acc:0.9022
+Train and val complete in 15m 14s
+Epoch [21/30]: 100%|██████████| 3750/3750 [00:46<00:00, 80.73it/s, acc=0.918, loss=0.224]
+Train Loss:0.2238  Train Acc: 0.9183
+Val Loss:0.2742  Val Acc:0.9035
+Train and val complete in 16m 0s
+Epoch [22/30]: 100%|██████████| 3750/3750 [00:40<00:00, 91.49it/s, acc=0.92, loss=0.219]
+Train Loss:0.2191  Train Acc: 0.9198
+Val Loss:0.2739  Val Acc:0.9039
+Train and val complete in 16m 41s
+Epoch [23/30]: 100%|██████████| 3750/3750 [00:50<00:00, 74.12it/s, acc=0.922, loss=0.215]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.2146  Train Acc: 0.9217
+Val Loss:0.2726  Val Acc:0.9033
+Train and val complete in 17m 32s
+Epoch [24/30]: 100%|██████████| 3750/3750 [00:42<00:00, 88.06it/s, acc=0.923, loss=0.21]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.2100  Train Acc: 0.9234
+Val Loss:0.2712  Val Acc:0.9055
+Train and val complete in 18m 15s
+Epoch [25/30]: 100%|██████████| 3750/3750 [00:46<00:00, 80.85it/s, acc=0.925, loss=0.206]
+Train Loss:0.2056  Train Acc: 0.9251
+Val Loss:0.2703  Val Acc:0.9053
+Train and val complete in 19m 1s
+Epoch [26/30]: 100%|██████████| 3750/3750 [00:51<00:00, 73.52it/s, acc=0.927, loss=0.201]
+Train Loss:0.2011  Train Acc: 0.9266
+Val Loss:0.2680  Val Acc:0.9060
+Train and val complete in 19m 52s
+Epoch [27/30]: 100%|██████████| 3750/3750 [00:43<00:00, 87.00it/s, acc=0.928, loss=0.197]
+Train Loss:0.1969  Train Acc: 0.9285
+Val Loss:0.2693  Val Acc:0.9052
+Train and val complete in 20m 35s
+Epoch [28/30]: 100%|██████████| 3750/3750 [00:46<00:00, 81.05it/s, acc=0.93, loss=0.193]
+  0%|          | 0/3750 [00:00<?, ?it/s]Train Loss:0.1928  Train Acc: 0.9296
+Val Loss:0.2686  Val Acc:0.9066
+Train and val complete in 21m 21s
+Epoch [29/30]: 100%|██████████| 3750/3750 [00:44<00:00, 84.46it/s, acc=0.932, loss=0.189]
+Train Loss:0.1886  Train Acc: 0.9315
+Val Loss:0.2679  Val Acc:0.9064
+Train and val complete in 22m 6s
+    epoch  train_loss_all  val_loss_all  train_acc_all  val_acc_all
+0       0        0.729626      0.533433       0.731000     0.797167
+1       1        0.501599      0.462117       0.810125     0.829000
+2       2        0.443821      0.420794       0.837500     0.847583
+3       3        0.407398      0.393918       0.851104     0.858083
+4       4        0.381447      0.374988       0.861229     0.865750
+5       5        0.360842      0.361234       0.868667     0.870000
+6       6        0.343703      0.351799       0.874604     0.873417
+7       7        0.329174      0.344728       0.879313     0.874667
+8       8        0.316439      0.338258       0.883687     0.875917
+9       9        0.305539      0.332300       0.887563     0.877583
+10     10        0.295902      0.324754       0.891000     0.880750
+11     11        0.286899      0.319899       0.894771     0.882500
+12     12        0.278810      0.314945       0.897854     0.884667
+13     13        0.271252      0.309080       0.900208     0.886917
+14     14        0.264210      0.302819       0.902687     0.887833
+15     15        0.257356      0.298910       0.905813     0.890250
+16     16        0.251174      0.292760       0.907833     0.894083
+17     17        0.245333      0.288098       0.909542     0.896917
+18     18        0.239430      0.285067       0.911458     0.898500
+19     19        0.234022      0.282167       0.914438     0.900083
+20     20        0.228722      0.278198       0.916333     0.902250
+21     21        0.223837      0.274236       0.918271     0.903500
+22     22        0.219111      0.273875       0.919771     0.903917
+23     23        0.214603      0.272628       0.921729     0.903333
+24     24        0.209984      0.271178       0.923375     0.905500
+25     25        0.205557      0.270304       0.925063     0.905333
+26     26        0.201115      0.267996       0.926583     0.906000
+27     27        0.196932      0.269328       0.928500     0.905167
+28     28        0.192840      0.268626       0.929625     0.906583
+29     29        0.188588      0.267853       0.931542     0.906417
+在测试集上的预测精度为： 0.8987

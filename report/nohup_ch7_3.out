@@ -1,0 +1,976 @@
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(1, 96, kernel_size=(11, 11), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(96, 96, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(96, 96, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (1): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (2): Sequential(
+    (0): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (4): Sequential(
+    (0): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (6): Dropout(p=0.5, inplace=False)
+  (7): Sequential(
+    (0): Conv2d(384, 10, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(10, 10, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(10, 10, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (8): AdaptiveAvgPool2d(output_size=(1, 1))
+  (9): Flatten()
+)
+Sequential      output shape:	 torch.Size([1, 96, 54, 54])
+MaxPool2d       output shape:	 torch.Size([1, 96, 26, 26])
+Sequential      output shape:	 torch.Size([1, 256, 26, 26])
+MaxPool2d       output shape:	 torch.Size([1, 256, 12, 12])
+Sequential      output shape:	 torch.Size([1, 384, 12, 12])
+MaxPool2d       output shape:	 torch.Size([1, 384, 5, 5])
+Dropout         output shape:	 torch.Size([1, 384, 5, 5])
+Sequential      output shape:	 torch.Size([1, 10, 5, 5])
+AdaptiveAvgPool2d output shape:	 torch.Size([1, 10, 1, 1])
+Flatten         output shape:	 torch.Size([1, 10])
+training on cuda:0
+  0%|                                                   | 0/235 [00:00<?, ?it/s]/home/bureaux/Projects/TorchProject/src/ch7/ch7_3.py:183: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(net.parameters(), max_norm=3, norm_type = 2)
+Epoch [0/100]: 100%|█████| 235/235 [00:25<00:00,  9.13it/s, acc=0.118, loss=2.3]
+loss 2.303, train acc 0.118, val loss 2.301, val acc 0.129,
+1474796.1 examples/sec on cuda:0
+Epoch [1/100]: 100%|████| 235/235 [00:27<00:00,  8.45it/s, acc=0.193, loss=2.21]
+loss 2.208, train acc 0.193, val loss 2.309, val acc 0.179,
+742507.2 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [2/100]: 100%|████| 235/235 [00:27<00:00,  8.46it/s, acc=0.439, loss=1.64]
+loss 1.644, train acc 0.439, val loss 1.559, val acc 0.470,
+510373.1 examples/sec on cuda:0
+Epoch [3/100]: 100%|████| 235/235 [00:29<00:00,  7.99it/s, acc=0.583, loss=1.25]
+loss 1.245, train acc 0.583, val loss 1.226, val acc 0.599,
+391000.4 examples/sec on cuda:0
+Epoch [4/100]: 100%|███| 235/235 [00:30<00:00,  7.82it/s, acc=0.691, loss=0.992]
+loss 0.992, train acc 0.691, val loss 0.963, val acc 0.702,
+305851.5 examples/sec on cuda:0
+Epoch [5/100]: 100%|███| 235/235 [00:29<00:00,  7.88it/s, acc=0.723, loss=0.838]
+loss 0.838, train acc 0.723, val loss 0.818, val acc 0.724,
+250776.4 examples/sec on cuda:0
+Epoch [6/100]: 100%|███| 235/235 [00:29<00:00,  8.05it/s, acc=0.743, loss=0.693]
+loss 0.693, train acc 0.743, val loss 0.664, val acc 0.753,
+218311.1 examples/sec on cuda:0
+Epoch [7/100]: 100%|█████| 235/235 [00:30<00:00,  7.74it/s, acc=0.77, loss=0.61]
+loss 0.610, train acc 0.770, val loss 0.606, val acc 0.770,
+184765.6 examples/sec on cuda:0
+Epoch [8/100]: 100%|███| 235/235 [00:29<00:00,  7.98it/s, acc=0.795, loss=0.549]
+loss 0.549, train acc 0.795, val loss 0.533, val acc 0.801,
+163463.6 examples/sec on cuda:0
+Epoch [9/100]: 100%|███| 235/235 [00:31<00:00,  7.57it/s, acc=0.813, loss=0.506]
+loss 0.506, train acc 0.813, val loss 0.490, val acc 0.819,
+146087.2 examples/sec on cuda:0
+Epoch [10/100]: 100%|██| 235/235 [00:29<00:00,  7.96it/s, acc=0.828, loss=0.468]
+loss 0.468, train acc 0.828, val loss 0.456, val acc 0.833,
+132246.3 examples/sec on cuda:0
+Epoch [11/100]: 100%|██| 235/235 [00:29<00:00,  7.93it/s, acc=0.837, loss=0.448]
+loss 0.448, train acc 0.837, val loss 0.456, val acc 0.833,
+120820.8 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [12/100]: 100%|██| 235/235 [00:30<00:00,  7.81it/s, acc=0.845, loss=0.421]
+loss 0.421, train acc 0.845, val loss 0.422, val acc 0.845,
+111278.8 examples/sec on cuda:0
+Epoch [13/100]: 100%|██| 235/235 [00:30<00:00,  7.78it/s, acc=0.855, loss=0.397]
+loss 0.397, train acc 0.855, val loss 0.385, val acc 0.859,
+103506.9 examples/sec on cuda:0
+Epoch [14/100]: 100%|██| 235/235 [00:30<00:00,  7.82it/s, acc=0.857, loss=0.388]
+loss 0.388, train acc 0.857, val loss 0.379, val acc 0.861,
+96353.4 examples/sec on cuda:0
+Epoch [15/100]: 100%|██| 235/235 [00:29<00:00,  8.01it/s, acc=0.864, loss=0.371]
+loss 0.371, train acc 0.864, val loss 0.369, val acc 0.865,
+90304.6 examples/sec on cuda:0
+Epoch [16/100]: 100%|██| 235/235 [00:29<00:00,  8.04it/s, acc=0.867, loss=0.362]
+loss 0.362, train acc 0.867, val loss 0.373, val acc 0.864,
+85355.4 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [17/100]: 100%|██| 235/235 [00:28<00:00,  8.12it/s, acc=0.872, loss=0.349]
+loss 0.349, train acc 0.872, val loss 0.342, val acc 0.874,
+80812.3 examples/sec on cuda:0
+Epoch [18/100]: 100%|██| 235/235 [00:29<00:00,  7.93it/s, acc=0.875, loss=0.339]
+loss 0.339, train acc 0.875, val loss 0.330, val acc 0.878,
+76330.0 examples/sec on cuda:0
+Epoch [19/100]: 100%|██| 235/235 [00:29<00:00,  7.86it/s, acc=0.877, loss=0.333]
+loss 0.333, train acc 0.877, val loss 0.328, val acc 0.879,
+72449.3 examples/sec on cuda:0
+Epoch [20/100]: 100%|███| 235/235 [00:29<00:00,  7.97it/s, acc=0.88, loss=0.328]
+loss 0.328, train acc 0.880, val loss 0.323, val acc 0.881,
+69421.4 examples/sec on cuda:0
+Epoch [21/100]: 100%|██| 235/235 [00:28<00:00,  8.15it/s, acc=0.883, loss=0.317]
+loss 0.317, train acc 0.883, val loss 0.308, val acc 0.886,
+66628.5 examples/sec on cuda:0
+Epoch [22/100]: 100%|██| 235/235 [00:29<00:00,  7.90it/s, acc=0.884, loss=0.314]
+loss 0.314, train acc 0.884, val loss 0.311, val acc 0.885,
+63617.0 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [23/100]: 100%|██| 235/235 [00:30<00:00,  7.66it/s, acc=0.891, loss=0.299]
+loss 0.299, train acc 0.891, val loss 0.299, val acc 0.891,
+61247.9 examples/sec on cuda:0
+Epoch [24/100]: 100%|██| 235/235 [00:29<00:00,  7.92it/s, acc=0.891, loss=0.293]
+loss 0.293, train acc 0.891, val loss 0.291, val acc 0.892,
+58620.9 examples/sec on cuda:0
+Epoch [25/100]: 100%|██| 235/235 [00:30<00:00,  7.67it/s, acc=0.892, loss=0.291]
+loss 0.291, train acc 0.892, val loss 0.304, val acc 0.890,
+56283.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [26/100]: 100%|██| 235/235 [00:30<00:00,  7.82it/s, acc=0.895, loss=0.285]
+loss 0.285, train acc 0.895, val loss 0.282, val acc 0.896,
+54062.6 examples/sec on cuda:0
+Epoch [27/100]: 100%|████| 235/235 [00:29<00:00,  8.06it/s, acc=0.9, loss=0.273]
+loss 0.273, train acc 0.900, val loss 0.273, val acc 0.900,
+52294.2 examples/sec on cuda:0
+Epoch [28/100]: 100%|██| 235/235 [00:30<00:00,  7.73it/s, acc=0.901, loss=0.268]
+loss 0.268, train acc 0.901, val loss 0.267, val acc 0.902,
+50344.3 examples/sec on cuda:0
+Epoch [29/100]: 100%|██| 235/235 [00:29<00:00,  7.84it/s, acc=0.903, loss=0.265]
+loss 0.265, train acc 0.903, val loss 0.260, val acc 0.905,
+48401.6 examples/sec on cuda:0
+Epoch [30/100]: 100%|███| 235/235 [00:29<00:00,  8.01it/s, acc=0.904, loss=0.26]
+loss 0.260, train acc 0.904, val loss 0.255, val acc 0.907,
+46665.1 examples/sec on cuda:0
+Epoch [31/100]: 100%|██| 235/235 [00:23<00:00, 10.06it/s, acc=0.908, loss=0.254]
+loss 0.254, train acc 0.908, val loss 0.250, val acc 0.910,
+45120.5 examples/sec on cuda:0
+Epoch [32/100]: 100%|███| 235/235 [00:29<00:00,  8.04it/s, acc=0.909, loss=0.25]
+loss 0.250, train acc 0.909, val loss 0.250, val acc 0.909,
+43868.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [33/100]: 100%|██| 235/235 [00:30<00:00,  7.79it/s, acc=0.909, loss=0.249]
+loss 0.249, train acc 0.909, val loss 0.242, val acc 0.911,
+42477.2 examples/sec on cuda:0
+Epoch [34/100]: 100%|██| 235/235 [00:30<00:00,  7.82it/s, acc=0.912, loss=0.239]
+loss 0.239, train acc 0.912, val loss 0.238, val acc 0.913,
+41179.1 examples/sec on cuda:0
+Epoch [35/100]: 100%|██| 235/235 [00:27<00:00,  8.45it/s, acc=0.913, loss=0.236]
+loss 0.236, train acc 0.913, val loss 0.230, val acc 0.916,
+40145.6 examples/sec on cuda:0
+Epoch [36/100]: 100%|██| 235/235 [00:31<00:00,  7.52it/s, acc=0.914, loss=0.235]
+loss 0.235, train acc 0.914, val loss 0.228, val acc 0.916,
+39038.1 examples/sec on cuda:0
+Epoch [37/100]: 100%|██| 235/235 [00:29<00:00,  7.89it/s, acc=0.917, loss=0.227]
+loss 0.227, train acc 0.917, val loss 0.227, val acc 0.917,
+37958.9 examples/sec on cuda:0
+Epoch [38/100]: 100%|██| 235/235 [00:32<00:00,  7.28it/s, acc=0.919, loss=0.225]
+loss 0.225, train acc 0.919, val loss 0.224, val acc 0.919,
+36846.2 examples/sec on cuda:0
+Epoch [39/100]: 100%|██| 235/235 [00:33<00:00,  6.99it/s, acc=0.919, loss=0.222]
+loss 0.222, train acc 0.919, val loss 0.219, val acc 0.921,
+35830.6 examples/sec on cuda:0
+Epoch [40/100]: 100%|██| 235/235 [00:31<00:00,  7.49it/s, acc=0.921, loss=0.218]
+loss 0.218, train acc 0.921, val loss 0.212, val acc 0.923,
+34859.6 examples/sec on cuda:0
+Epoch [41/100]: 100%|██| 235/235 [00:29<00:00,  7.91it/s, acc=0.921, loss=0.216]
+loss 0.216, train acc 0.921, val loss 0.213, val acc 0.923,
+33984.0 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [42/100]: 100%|███| 235/235 [00:29<00:00,  7.88it/s, acc=0.923, loss=0.21]
+loss 0.210, train acc 0.923, val loss 0.203, val acc 0.926,
+33238.3 examples/sec on cuda:0
+Epoch [43/100]: 100%|██| 235/235 [00:28<00:00,  8.16it/s, acc=0.925, loss=0.204]
+loss 0.204, train acc 0.925, val loss 0.210, val acc 0.923,
+32477.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [44/100]: 100%|██| 235/235 [00:29<00:00,  7.92it/s, acc=0.926, loss=0.206]
+loss 0.206, train acc 0.926, val loss 0.198, val acc 0.928,
+31849.7 examples/sec on cuda:0
+Epoch [45/100]: 100%|██| 235/235 [00:30<00:00,  7.71it/s, acc=0.926, loss=0.202]
+loss 0.202, train acc 0.926, val loss 0.196, val acc 0.928,
+31108.1 examples/sec on cuda:0
+Epoch [46/100]: 100%|██| 235/235 [00:30<00:00,  7.82it/s, acc=0.928, loss=0.198]
+loss 0.198, train acc 0.928, val loss 0.195, val acc 0.928,
+30477.1 examples/sec on cuda:0
+Epoch [47/100]: 100%|███| 235/235 [00:29<00:00,  8.06it/s, acc=0.932, loss=0.19]
+loss 0.190, train acc 0.932, val loss 0.188, val acc 0.932,
+29813.2 examples/sec on cuda:0
+Epoch [48/100]: 100%|██| 235/235 [00:30<00:00,  7.59it/s, acc=0.931, loss=0.186]
+loss 0.186, train acc 0.931, val loss 0.185, val acc 0.932,
+29171.9 examples/sec on cuda:0
+Epoch [49/100]: 100%|██| 235/235 [00:28<00:00,  8.11it/s, acc=0.933, loss=0.182]
+loss 0.182, train acc 0.933, val loss 0.177, val acc 0.935,
+28600.0 examples/sec on cuda:0
+Epoch [50/100]: 100%|███| 235/235 [00:29<00:00,  8.05it/s, acc=0.934, loss=0.18]
+loss 0.180, train acc 0.934, val loss 0.176, val acc 0.936,
+28109.1 examples/sec on cuda:0
+Epoch [51/100]: 100%|██| 235/235 [00:30<00:00,  7.77it/s, acc=0.934, loss=0.179]
+loss 0.179, train acc 0.934, val loss 0.175, val acc 0.935,
+27563.5 examples/sec on cuda:0
+Epoch [52/100]: 100%|██| 235/235 [00:29<00:00,  7.84it/s, acc=0.936, loss=0.176]
+loss 0.176, train acc 0.936, val loss 0.171, val acc 0.938,
+26977.4 examples/sec on cuda:0
+Epoch [53/100]: 100%|██| 235/235 [00:30<00:00,  7.76it/s, acc=0.935, loss=0.177]
+loss 0.177, train acc 0.935, val loss 0.171, val acc 0.938,
+26450.6 examples/sec on cuda:0
+Epoch [54/100]: 100%|██| 235/235 [00:28<00:00,  8.16it/s, acc=0.937, loss=0.171]
+loss 0.171, train acc 0.937, val loss 0.170, val acc 0.938,
+26039.9 examples/sec on cuda:0
+Epoch [55/100]: 100%|██| 235/235 [00:30<00:00,  7.59it/s, acc=0.939, loss=0.167]
+loss 0.167, train acc 0.939, val loss 0.172, val acc 0.937,
+25548.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [56/100]: 100%|██| 235/235 [00:29<00:00,  8.00it/s, acc=0.938, loss=0.169]
+loss 0.169, train acc 0.938, val loss 0.163, val acc 0.941,
+25093.8 examples/sec on cuda:0
+Epoch [57/100]: 100%|██| 235/235 [00:30<00:00,  7.80it/s, acc=0.939, loss=0.163]
+loss 0.163, train acc 0.939, val loss 0.158, val acc 0.942,
+24615.6 examples/sec on cuda:0
+Epoch [58/100]: 100%|██| 235/235 [00:30<00:00,  7.79it/s, acc=0.942, loss=0.161]
+loss 0.161, train acc 0.942, val loss 0.156, val acc 0.944,
+24207.4 examples/sec on cuda:0
+Epoch [59/100]: 100%|██| 235/235 [00:29<00:00,  7.98it/s, acc=0.942, loss=0.159]
+loss 0.159, train acc 0.942, val loss 0.152, val acc 0.945,
+23795.7 examples/sec on cuda:0
+Epoch [60/100]: 100%|██| 235/235 [00:29<00:00,  7.97it/s, acc=0.943, loss=0.156]
+loss 0.156, train acc 0.943, val loss 0.155, val acc 0.943,
+23430.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [61/100]: 100%|██| 235/235 [00:30<00:00,  7.61it/s, acc=0.942, loss=0.155]
+loss 0.155, train acc 0.942, val loss 0.150, val acc 0.945,
+23028.1 examples/sec on cuda:0
+Epoch [62/100]: 100%|██| 235/235 [00:28<00:00,  8.21it/s, acc=0.944, loss=0.153]
+loss 0.153, train acc 0.944, val loss 0.146, val acc 0.947,
+22704.4 examples/sec on cuda:0
+Epoch [63/100]: 100%|██| 235/235 [00:30<00:00,  7.60it/s, acc=0.946, loss=0.146]
+loss 0.146, train acc 0.946, val loss 0.154, val acc 0.943,
+22330.9 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [64/100]: 100%|██| 235/235 [00:29<00:00,  7.88it/s, acc=0.948, loss=0.144]
+loss 0.144, train acc 0.948, val loss 0.141, val acc 0.949,
+22007.2 examples/sec on cuda:0
+Epoch [65/100]: 100%|██| 235/235 [00:29<00:00,  8.04it/s, acc=0.947, loss=0.142]
+loss 0.142, train acc 0.947, val loss 0.138, val acc 0.949,
+21652.2 examples/sec on cuda:0
+Epoch [66/100]: 100%|██| 235/235 [00:30<00:00,  7.72it/s, acc=0.948, loss=0.142]
+loss 0.142, train acc 0.948, val loss 0.136, val acc 0.950,
+21321.7 examples/sec on cuda:0
+Epoch [67/100]: 100%|███| 235/235 [00:29<00:00,  7.84it/s, acc=0.95, loss=0.134]
+loss 0.134, train acc 0.950, val loss 0.129, val acc 0.952,
+20983.0 examples/sec on cuda:0
+Epoch [68/100]: 100%|███| 235/235 [00:29<00:00,  7.93it/s, acc=0.95, loss=0.135]
+loss 0.135, train acc 0.950, val loss 0.129, val acc 0.953,
+20671.5 examples/sec on cuda:0
+Epoch [69/100]: 100%|███| 235/235 [00:29<00:00,  7.91it/s, acc=0.95, loss=0.135]
+loss 0.135, train acc 0.950, val loss 0.129, val acc 0.953,
+20336.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [70/100]: 100%|███| 235/235 [00:29<00:00,  8.03it/s, acc=0.953, loss=0.13]
+loss 0.130, train acc 0.953, val loss 0.127, val acc 0.954,
+20084.8 examples/sec on cuda:0
+Epoch [71/100]: 100%|██| 235/235 [00:30<00:00,  7.83it/s, acc=0.953, loss=0.129]
+loss 0.129, train acc 0.953, val loss 0.129, val acc 0.953,
+19794.9 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [72/100]: 100%|██| 235/235 [00:29<00:00,  7.91it/s, acc=0.954, loss=0.123]
+loss 0.123, train acc 0.954, val loss 0.122, val acc 0.955,
+19514.1 examples/sec on cuda:0
+Epoch [73/100]: 100%|██| 235/235 [00:30<00:00,  7.83it/s, acc=0.956, loss=0.121]
+loss 0.121, train acc 0.956, val loss 0.115, val acc 0.958,
+19244.2 examples/sec on cuda:0
+Epoch [74/100]: 100%|██| 235/235 [00:30<00:00,  7.80it/s, acc=0.955, loss=0.123]
+loss 0.123, train acc 0.955, val loss 0.116, val acc 0.958,
+18979.7 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [75/100]: 100%|██| 235/235 [00:29<00:00,  7.85it/s, acc=0.958, loss=0.117]
+loss 0.117, train acc 0.958, val loss 0.115, val acc 0.959,
+18720.1 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [76/100]: 100%|██| 235/235 [00:29<00:00,  7.84it/s, acc=0.958, loss=0.115]
+loss 0.115, train acc 0.958, val loss 0.111, val acc 0.959,
+18500.7 examples/sec on cuda:0
+Epoch [77/100]: 100%|██| 235/235 [00:29<00:00,  7.96it/s, acc=0.958, loss=0.114]
+loss 0.114, train acc 0.958, val loss 0.107, val acc 0.961,
+18259.9 examples/sec on cuda:0
+Epoch [78/100]: 100%|████| 235/235 [00:29<00:00,  7.90it/s, acc=0.96, loss=0.11]
+loss 0.110, train acc 0.960, val loss 0.105, val acc 0.962,
+18028.4 examples/sec on cuda:0
+Epoch [79/100]: 100%|██| 235/235 [00:29<00:00,  7.94it/s, acc=0.959, loss=0.109]
+loss 0.109, train acc 0.959, val loss 0.106, val acc 0.961,
+17835.0 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [80/100]: 100%|███| 235/235 [00:29<00:00,  8.07it/s, acc=0.96, loss=0.105]
+loss 0.105, train acc 0.960, val loss 0.100, val acc 0.963,
+17637.5 examples/sec on cuda:0
+Epoch [81/100]: 100%|██| 235/235 [00:29<00:00,  8.08it/s, acc=0.962, loss=0.103]
+loss 0.103, train acc 0.962, val loss 0.098, val acc 0.964,
+17428.2 examples/sec on cuda:0
+Epoch [82/100]: 100%|███| 235/235 [00:29<00:00,  7.95it/s, acc=0.96, loss=0.107]
+loss 0.107, train acc 0.960, val loss 0.101, val acc 0.963,
+17218.0 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [83/100]: 100%|██| 235/235 [00:29<00:00,  7.95it/s, acc=0.963, loss=0.101]
+loss 0.101, train acc 0.963, val loss 0.095, val acc 0.966,
+17010.1 examples/sec on cuda:0
+Epoch [84/100]: 100%|█| 235/235 [00:30<00:00,  7.79it/s, acc=0.963, loss=0.0983]
+loss 0.098, train acc 0.963, val loss 0.092, val acc 0.966,
+16800.8 examples/sec on cuda:0
+Epoch [85/100]: 100%|█| 235/235 [00:29<00:00,  7.98it/s, acc=0.962, loss=0.0994]
+loss 0.099, train acc 0.962, val loss 0.092, val acc 0.965,
+16629.7 examples/sec on cuda:0
+Epoch [86/100]: 100%|█| 235/235 [00:29<00:00,  8.02it/s, acc=0.966, loss=0.0932]
+loss 0.093, train acc 0.966, val loss 0.088, val acc 0.968,
+16436.8 examples/sec on cuda:0
+Epoch [87/100]: 100%|██| 235/235 [00:30<00:00,  7.69it/s, acc=0.968, loss=0.088]
+loss 0.088, train acc 0.968, val loss 0.085, val acc 0.968,
+16239.0 examples/sec on cuda:0
+Epoch [88/100]: 100%|█| 235/235 [00:29<00:00,  7.85it/s, acc=0.967, loss=0.0911]
+loss 0.091, train acc 0.967, val loss 0.089, val acc 0.968,
+16046.6 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [89/100]: 100%|█| 235/235 [00:30<00:00,  7.70it/s, acc=0.967, loss=0.0885]
+loss 0.088, train acc 0.967, val loss 0.081, val acc 0.970,
+15836.5 examples/sec on cuda:0
+Epoch [90/100]: 100%|█| 235/235 [00:28<00:00,  8.25it/s, acc=0.967, loss=0.0887]
+loss 0.089, train acc 0.967, val loss 0.085, val acc 0.968,
+15683.8 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [91/100]: 100%|█| 235/235 [00:30<00:00,  7.61it/s, acc=0.969, loss=0.0853]
+loss 0.085, train acc 0.969, val loss 0.079, val acc 0.971,
+15512.0 examples/sec on cuda:0
+Epoch [92/100]: 100%|█| 235/235 [00:30<00:00,  7.70it/s, acc=0.969, loss=0.0861]
+loss 0.086, train acc 0.969, val loss 0.080, val acc 0.971,
+15339.5 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [93/100]: 100%|██| 235/235 [00:30<00:00,  7.75it/s, acc=0.97, loss=0.0798]
+loss 0.080, train acc 0.970, val loss 0.074, val acc 0.972,
+15186.9 examples/sec on cuda:0
+Epoch [94/100]: 100%|█| 235/235 [00:28<00:00,  8.18it/s, acc=0.971, loss=0.0797]
+loss 0.080, train acc 0.971, val loss 0.072, val acc 0.974,
+15020.2 examples/sec on cuda:0
+Epoch [95/100]: 100%|█| 235/235 [00:29<00:00,  7.92it/s, acc=0.971, loss=0.0762]
+loss 0.076, train acc 0.971, val loss 0.072, val acc 0.973,
+14865.1 examples/sec on cuda:0
+Epoch [96/100]: 100%|█| 235/235 [00:30<00:00,  7.78it/s, acc=0.972, loss=0.0762]
+loss 0.076, train acc 0.972, val loss 0.072, val acc 0.974,
+14703.7 examples/sec on cuda:0
+Epoch [97/100]: 100%|█| 235/235 [00:30<00:00,  7.82it/s, acc=0.973, loss=0.0726]
+loss 0.073, train acc 0.973, val loss 0.067, val acc 0.976,
+14540.1 examples/sec on cuda:0
+Epoch [98/100]: 100%|█| 235/235 [00:29<00:00,  8.09it/s, acc=0.971, loss=0.0768]
+loss 0.077, train acc 0.971, val loss 0.072, val acc 0.973,
+14401.5 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [99/100]: 100%|█| 235/235 [00:29<00:00,  7.89it/s, acc=0.974, loss=0.0732]
+loss 0.073, train acc 0.974, val loss 0.067, val acc 0.976,
+14257.3 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+-------------Test Set Evaluation----------
+test acc 0.923
+    epoch      loss       acc   val_acc  val_loss
+0       0  2.303325  0.117541  0.128983  2.301384
+1       1  2.207925  0.192694  0.178533  2.309491
+2       2  1.644284  0.438747  0.470317  1.558530
+3       3  1.245205  0.583382  0.598683  1.225678
+4       4  0.991782  0.690928  0.702250  0.963176
+5       5  0.837856  0.722760  0.723883  0.817732
+6       6  0.692814  0.743247  0.752550  0.663991
+7       7  0.610206  0.769739  0.770167  0.605536
+8       8  0.549270  0.795109  0.801317  0.532891
+9       9  0.506197  0.812978  0.819333  0.489885
+10     10  0.468208  0.827751  0.832550  0.455610
+11     11  0.447652  0.836582  0.832567  0.455824
+12     12  0.421215  0.845184  0.844500  0.422302
+13     13  0.396906  0.855116  0.859117  0.385257
+14     14  0.387705  0.857214  0.860600  0.379378
+15     15  0.371087  0.863988  0.865233  0.369297
+16     16  0.362116  0.867021  0.864467  0.373081
+17     17  0.349023  0.871530  0.874467  0.342115
+18     18  0.339396  0.874709  0.878283  0.329708
+19     19  0.332556  0.877161  0.879050  0.327559
+20     20  0.327868  0.879654  0.880733  0.322936
+21     21  0.317228  0.882584  0.886283  0.308089
+22     22  0.313775  0.883914  0.884667  0.311059
+23     23  0.298667  0.890708  0.891133  0.298743
+24     24  0.292905  0.890978  0.892233  0.290779
+25     25  0.291467  0.892350  0.889533  0.304040
+26     26  0.285193  0.894988  0.895917  0.281782
+27     27  0.273365  0.900495  0.900467  0.273107
+28     28  0.268101  0.901492  0.901833  0.267398
+29     29  0.264939  0.902967  0.904767  0.260101
+30     30  0.260022  0.904422  0.906850  0.254610
+31     31  0.254304  0.908245  0.909633  0.249736
+32     32  0.250013  0.908930  0.908583  0.249986
+33     33  0.248630  0.908847  0.911433  0.241763
+34     34  0.239226  0.911902  0.912967  0.238011
+35     35  0.236089  0.913314  0.915817  0.230302
+36     36  0.234733  0.914312  0.916383  0.228221
+37     37  0.227176  0.917158  0.917117  0.226594
+38     38  0.225063  0.918904  0.918717  0.223827
+39     39  0.222414  0.919361  0.920850  0.219084
+40     40  0.217656  0.921044  0.922667  0.212375
+41     41  0.215755  0.921376  0.922517  0.212605
+42     42  0.210228  0.923080  0.925667  0.203376
+43     43  0.203506  0.924950  0.923000  0.209646
+44     44  0.205603  0.925553  0.928333  0.198477
+45     45  0.201749  0.925802  0.928250  0.196285
+46     46  0.197560  0.928088  0.928217  0.195126
+47     47  0.189811  0.931620  0.932250  0.187924
+48     48  0.185982  0.931433  0.931950  0.185174
+49     49  0.181939  0.932721  0.934983  0.177123
+50     50  0.179701  0.934487  0.935800  0.175832
+51     51  0.179324  0.933802  0.935017  0.175386
+52     52  0.175982  0.936108  0.938250  0.171015
+53     53  0.177247  0.935214  0.937833  0.170856
+54     54  0.170854  0.937458  0.938233  0.169801
+55     55  0.166535  0.938601  0.936550  0.172243
+56     56  0.169000  0.938352  0.941383  0.162560
+57     57  0.163304  0.939328  0.941583  0.157960
+58     58  0.160815  0.941552  0.943783  0.155690
+59     59  0.158513  0.942341  0.944650  0.151643
+60     60  0.155714  0.943359  0.942867  0.155041
+61     61  0.154786  0.942404  0.944833  0.150162
+62     62  0.153387  0.943650  0.946550  0.146026
+63     63  0.145824  0.946102  0.943117  0.154284
+64     64  0.143545  0.947681  0.948750  0.140853
+65     65  0.141904  0.947183  0.948750  0.138177
+66     66  0.141676  0.948284  0.950450  0.136198
+67     67  0.134195  0.950424  0.952433  0.129356
+68     68  0.135184  0.950445  0.952983  0.128880
+69     69  0.135198  0.950091  0.952617  0.129321
+70     70  0.130011  0.952564  0.953517  0.126560
+71     71  0.128675  0.952564  0.952583  0.128986
+72     72  0.123393  0.954455  0.955000  0.121697
+73     73  0.121234  0.955992  0.958317  0.114784
+74     74  0.122780  0.955120  0.957600  0.116442
+75     75  0.116857  0.957821  0.958617  0.114788
+76     76  0.115106  0.957675  0.959150  0.111425
+77     77  0.113524  0.957966  0.961050  0.106635
+78     78  0.110451  0.959691  0.961967  0.105081
+79     79  0.108821  0.959379  0.960650  0.105997
+80     80  0.105438  0.960460  0.962900  0.100063
+81     81  0.103207  0.961706  0.963750  0.097944
+82     82  0.107293  0.960127  0.962650  0.101072
+83     83  0.100797  0.963285  0.965533  0.095434
+84     84  0.098299  0.962911  0.965667  0.092015
+85     85  0.099397  0.962371  0.965383  0.092009
+86     86  0.093200  0.965820  0.967833  0.087517
+87     87  0.087988  0.967524  0.968450  0.085295
+88     88  0.091118  0.966859  0.967550  0.088801
+89     89  0.088485  0.967046  0.970100  0.081041
+90     90  0.088712  0.967212  0.968317  0.085099
+91     91  0.085316  0.968584  0.971367  0.078734
+92     92  0.086125  0.968646  0.970967  0.080319
+93     93  0.079764  0.970412  0.972383  0.074403
+94     94  0.079659  0.971389  0.974350  0.072290
+95     95  0.076239  0.971077  0.972700  0.071988
+96     96  0.076163  0.971950  0.973783  0.071773
+97     97  0.072582  0.973487  0.976067  0.066514
+98     98  0.076815  0.971223  0.973383  0.071652
+99     99  0.073192  0.973529  0.976067  0.067031
+
+
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(1, 96, kernel_size=(11, 11), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(96, 96, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(96, 96, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (1): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (2): Sequential(
+    (0): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (4): Sequential(
+    (0): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (6): Dropout(p=0.5, inplace=False)
+  (7): Sequential(
+    (0): Conv2d(384, 10, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(10, 10, kernel_size=(1, 1), stride=(1, 1))
+    (3): ReLU()
+    (4): Conv2d(10, 10, kernel_size=(1, 1), stride=(1, 1))
+    (5): ReLU()
+  )
+  (8): AdaptiveAvgPool2d(output_size=(1, 1))
+  (9): Flatten()
+)
+Sequential      output shape:	 torch.Size([1, 96, 54, 54])
+MaxPool2d       output shape:	 torch.Size([1, 96, 26, 26])
+Sequential      output shape:	 torch.Size([1, 256, 26, 26])
+MaxPool2d       output shape:	 torch.Size([1, 256, 12, 12])
+Sequential      output shape:	 torch.Size([1, 384, 12, 12])
+MaxPool2d       output shape:	 torch.Size([1, 384, 5, 5])
+Dropout         output shape:	 torch.Size([1, 384, 5, 5])
+Sequential      output shape:	 torch.Size([1, 10, 5, 5])
+AdaptiveAvgPool2d output shape:	 torch.Size([1, 10, 1, 1])
+Flatten         output shape:	 torch.Size([1, 10])
+training on cuda:0
+  0%|                                                   | 0/235 [00:00<?, ?it/s]/home/bureaux/Projects/TorchProject/src/ch7/ch7_3.py:183: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(net.parameters(), max_norm=3, norm_type = 2)
+Epoch [0/100]: 100%|███████| 235/235 [00:24<00:00,  9.44it/s, acc=0.255, loss=2]
+loss 2.002, train acc 0.255, val loss 1.944, val acc 0.277,
+1657081.9 examples/sec on cuda:0
+Epoch [1/100]: 100%|████| 235/235 [00:24<00:00,  9.42it/s, acc=0.457, loss=1.56]
+loss 1.561, train acc 0.457, val loss 1.524, val acc 0.468,
+780893.3 examples/sec on cuda:0
+Epoch [2/100]: 100%|████| 235/235 [00:25<00:00,  9.38it/s, acc=0.541, loss=1.35]
+loss 1.345, train acc 0.541, val loss 1.334, val acc 0.546,
+509502.7 examples/sec on cuda:0
+Epoch [3/100]: 100%|█████| 235/235 [00:24<00:00,  9.69it/s, acc=0.59, loss=1.22]
+loss 1.220, train acc 0.590, val loss 1.212, val acc 0.599,
+386962.8 examples/sec on cuda:0
+Epoch [4/100]: 100%|████| 235/235 [00:24<00:00,  9.59it/s, acc=0.657, loss=1.05]
+loss 1.053, train acc 0.657, val loss 1.032, val acc 0.661,
+310956.3 examples/sec on cuda:0
+Epoch [5/100]: 100%|███| 235/235 [00:25<00:00,  9.30it/s, acc=0.741, loss=0.869]
+loss 0.869, train acc 0.741, val loss 0.847, val acc 0.748,
+254898.3 examples/sec on cuda:0
+Epoch [6/100]: 100%|███| 235/235 [00:26<00:00,  8.88it/s, acc=0.789, loss=0.702]
+loss 0.702, train acc 0.789, val loss 0.685, val acc 0.791,
+221365.7 examples/sec on cuda:0
+Epoch [7/100]: 100%|███| 235/235 [00:27<00:00,  8.55it/s, acc=0.802, loss=0.611]
+loss 0.611, train acc 0.802, val loss 0.601, val acc 0.805,
+195410.8 examples/sec on cuda:0
+Epoch [8/100]: 100%|███| 235/235 [00:27<00:00,  8.61it/s, acc=0.814, loss=0.563]
+loss 0.563, train acc 0.814, val loss 0.556, val acc 0.815,
+173522.7 examples/sec on cuda:0
+Epoch [9/100]: 100%|███| 235/235 [00:28<00:00,  8.39it/s, acc=0.822, loss=0.525]
+loss 0.525, train acc 0.822, val loss 0.525, val acc 0.822,
+156405.4 examples/sec on cuda:0
+Epoch [10/100]: 100%|██| 235/235 [00:25<00:00,  9.05it/s, acc=0.825, loss=0.516]
+loss 0.516, train acc 0.825, val loss 0.513, val acc 0.826,
+151385.2 examples/sec on cuda:0
+Epoch [11/100]: 100%|███| 235/235 [00:28<00:00,  8.27it/s, acc=0.83, loss=0.495]
+loss 0.495, train acc 0.830, val loss 0.492, val acc 0.832,
+137620.5 examples/sec on cuda:0
+Epoch [12/100]: 100%|██| 235/235 [00:29<00:00,  8.09it/s, acc=0.832, loss=0.487]
+loss 0.487, train acc 0.832, val loss 0.485, val acc 0.833,
+125440.6 examples/sec on cuda:0
+Epoch [13/100]: 100%|██| 235/235 [00:28<00:00,  8.11it/s, acc=0.837, loss=0.469]
+loss 0.469, train acc 0.837, val loss 0.469, val acc 0.837,
+115982.6 examples/sec on cuda:0
+Epoch [14/100]: 100%|██| 235/235 [00:28<00:00,  8.17it/s, acc=0.839, loss=0.465]
+loss 0.465, train acc 0.839, val loss 0.460, val acc 0.840,
+107317.0 examples/sec on cuda:0
+Epoch [15/100]: 100%|██| 235/235 [00:29<00:00,  7.98it/s, acc=0.843, loss=0.445]
+loss 0.445, train acc 0.843, val loss 0.445, val acc 0.843,
+99518.7 examples/sec on cuda:0
+Epoch [16/100]: 100%|██| 235/235 [00:29<00:00,  8.04it/s, acc=0.845, loss=0.443]
+loss 0.443, train acc 0.845, val loss 0.439, val acc 0.845,
+92812.6 examples/sec on cuda:0
+Epoch [17/100]: 100%|██| 235/235 [00:28<00:00,  8.27it/s, acc=0.846, loss=0.434]
+loss 0.434, train acc 0.846, val loss 0.431, val acc 0.847,
+87700.2 examples/sec on cuda:0
+Epoch [18/100]: 100%|██| 235/235 [00:29<00:00,  7.84it/s, acc=0.849, loss=0.426]
+loss 0.426, train acc 0.849, val loss 0.423, val acc 0.850,
+82510.5 examples/sec on cuda:0
+Epoch [19/100]: 100%|██| 235/235 [00:30<00:00,  7.78it/s, acc=0.852, loss=0.416]
+loss 0.416, train acc 0.852, val loss 0.416, val acc 0.852,
+78360.5 examples/sec on cuda:0
+Epoch [20/100]: 100%|██| 235/235 [00:28<00:00,  8.32it/s, acc=0.856, loss=0.401]
+loss 0.401, train acc 0.856, val loss 0.407, val acc 0.854,
+74230.9 examples/sec on cuda:0
+Epoch [21/100]: 100%|██| 235/235 [00:29<00:00,  8.07it/s, acc=0.852, loss=0.412]
+loss 0.412, train acc 0.852, val loss 0.407, val acc 0.853,
+70486.7 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [22/100]: 100%|██| 235/235 [00:29<00:00,  8.04it/s, acc=0.857, loss=0.397]
+loss 0.397, train acc 0.857, val loss 0.396, val acc 0.857,
+67360.1 examples/sec on cuda:0
+Epoch [23/100]: 100%|███| 235/235 [00:28<00:00,  8.14it/s, acc=0.86, loss=0.391]
+loss 0.391, train acc 0.860, val loss 0.390, val acc 0.860,
+64169.7 examples/sec on cuda:0
+Epoch [24/100]: 100%|██| 235/235 [00:29<00:00,  8.09it/s, acc=0.864, loss=0.377]
+loss 0.377, train acc 0.864, val loss 0.377, val acc 0.863,
+61513.2 examples/sec on cuda:0
+Epoch [25/100]: 100%|██| 235/235 [00:29<00:00,  7.94it/s, acc=0.864, loss=0.373]
+loss 0.373, train acc 0.864, val loss 0.372, val acc 0.864,
+59135.8 examples/sec on cuda:0
+Epoch [26/100]: 100%|██| 235/235 [00:29<00:00,  8.08it/s, acc=0.865, loss=0.371]
+loss 0.371, train acc 0.865, val loss 0.369, val acc 0.865,
+57009.4 examples/sec on cuda:0
+Epoch [27/100]: 100%|██| 235/235 [00:29<00:00,  7.95it/s, acc=0.864, loss=0.372]
+loss 0.372, train acc 0.864, val loss 0.372, val acc 0.864,
+54796.5 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [28/100]: 100%|███| 235/235 [00:28<00:00,  8.24it/s, acc=0.867, loss=0.36]
+loss 0.360, train acc 0.867, val loss 0.361, val acc 0.867,
+52817.8 examples/sec on cuda:0
+Epoch [29/100]: 100%|███| 235/235 [00:29<00:00,  8.09it/s, acc=0.871, loss=0.35]
+loss 0.350, train acc 0.871, val loss 0.350, val acc 0.871,
+51093.0 examples/sec on cuda:0
+Epoch [30/100]: 100%|██| 235/235 [00:28<00:00,  8.13it/s, acc=0.871, loss=0.348]
+loss 0.348, train acc 0.871, val loss 0.350, val acc 0.871,
+49510.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [31/100]: 100%|██| 235/235 [00:28<00:00,  8.12it/s, acc=0.872, loss=0.348]
+loss 0.348, train acc 0.872, val loss 0.343, val acc 0.873,
+48024.5 examples/sec on cuda:0
+Epoch [32/100]: 100%|██| 235/235 [00:28<00:00,  8.27it/s, acc=0.875, loss=0.334]
+loss 0.334, train acc 0.875, val loss 0.331, val acc 0.876,
+46595.1 examples/sec on cuda:0
+Epoch [33/100]: 100%|██| 235/235 [00:29<00:00,  8.09it/s, acc=0.874, loss=0.336]
+loss 0.336, train acc 0.874, val loss 0.332, val acc 0.875,
+45149.5 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [34/100]: 100%|██| 235/235 [00:28<00:00,  8.14it/s, acc=0.872, loss=0.343]
+loss 0.343, train acc 0.872, val loss 0.341, val acc 0.872,
+43934.0 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [35/100]: 100%|██| 235/235 [00:28<00:00,  8.15it/s, acc=0.876, loss=0.326]
+loss 0.326, train acc 0.876, val loss 0.328, val acc 0.876,
+42709.0 examples/sec on cuda:0
+Epoch [36/100]: 100%|██| 235/235 [00:28<00:00,  8.36it/s, acc=0.878, loss=0.323]
+loss 0.323, train acc 0.878, val loss 0.321, val acc 0.878,
+41583.5 examples/sec on cuda:0
+Epoch [37/100]: 100%|██| 235/235 [00:28<00:00,  8.18it/s, acc=0.879, loss=0.318]
+loss 0.318, train acc 0.879, val loss 0.318, val acc 0.879,
+40553.2 examples/sec on cuda:0
+Epoch [38/100]: 100%|███| 235/235 [00:28<00:00,  8.10it/s, acc=0.88, loss=0.312]
+loss 0.312, train acc 0.880, val loss 0.313, val acc 0.880,
+39440.8 examples/sec on cuda:0
+Epoch [39/100]: 100%|███| 235/235 [00:28<00:00,  8.16it/s, acc=0.88, loss=0.314]
+loss 0.314, train acc 0.880, val loss 0.317, val acc 0.879,
+38433.7 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [40/100]: 100%|██| 235/235 [00:29<00:00,  7.95it/s, acc=0.882, loss=0.307]
+loss 0.307, train acc 0.882, val loss 0.305, val acc 0.883,
+37366.1 examples/sec on cuda:0
+Epoch [41/100]: 100%|██| 235/235 [00:29<00:00,  8.09it/s, acc=0.881, loss=0.311]
+loss 0.311, train acc 0.881, val loss 0.307, val acc 0.882,
+36467.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [42/100]: 100%|██| 235/235 [00:29<00:00,  8.01it/s, acc=0.886, loss=0.293]
+loss 0.293, train acc 0.886, val loss 0.291, val acc 0.887,
+35499.2 examples/sec on cuda:0
+Epoch [43/100]: 100%|██| 235/235 [00:28<00:00,  8.28it/s, acc=0.884, loss=0.305]
+loss 0.305, train acc 0.884, val loss 0.306, val acc 0.883,
+34650.3 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [44/100]: 100%|██| 235/235 [00:28<00:00,  8.18it/s, acc=0.884, loss=0.299]
+loss 0.299, train acc 0.884, val loss 0.299, val acc 0.884,
+33937.2 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [45/100]: 100%|██| 235/235 [00:28<00:00,  8.20it/s, acc=0.885, loss=0.294]
+loss 0.294, train acc 0.885, val loss 0.293, val acc 0.885,
+33179.1 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [46/100]: 100%|██| 235/235 [00:28<00:00,  8.18it/s, acc=0.888, loss=0.286]
+loss 0.286, train acc 0.888, val loss 0.288, val acc 0.887,
+32451.4 examples/sec on cuda:0
+Epoch [47/100]: 100%|██| 235/235 [00:29<00:00,  8.07it/s, acc=0.887, loss=0.286]
+loss 0.286, train acc 0.887, val loss 0.289, val acc 0.887,
+31725.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [48/100]: 100%|██| 235/235 [00:28<00:00,  8.25it/s, acc=0.883, loss=0.299]
+loss 0.299, train acc 0.883, val loss 0.296, val acc 0.884,
+31107.8 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [49/100]: 100%|██| 235/235 [00:28<00:00,  8.24it/s, acc=0.883, loss=0.301]
+loss 0.301, train acc 0.883, val loss 0.300, val acc 0.884,
+30518.7 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [50/100]: 100%|██| 235/235 [00:29<00:00,  8.08it/s, acc=0.885, loss=0.294]
+loss 0.294, train acc 0.885, val loss 0.292, val acc 0.885,
+29926.2 examples/sec on cuda:0
+EarlyStopping counter: 4 out of 10
+Epoch    51: reducing learning rate of group 0 to 5.0000e-04.
+Epoch [51/100]: 100%|██| 235/235 [00:29<00:00,  8.06it/s, acc=0.894, loss=0.264]
+loss 0.264, train acc 0.894, val loss 0.263, val acc 0.893,
+29361.3 examples/sec on cuda:0
+Epoch [52/100]: 100%|██| 235/235 [00:28<00:00,  8.21it/s, acc=0.895, loss=0.255]
+loss 0.255, train acc 0.895, val loss 0.253, val acc 0.896,
+28769.7 examples/sec on cuda:0
+Epoch [53/100]: 100%|███| 235/235 [00:28<00:00,  8.18it/s, acc=0.897, loss=0.25]
+loss 0.250, train acc 0.897, val loss 0.250, val acc 0.897,
+28235.4 examples/sec on cuda:0
+Epoch [54/100]: 100%|███| 235/235 [00:28<00:00,  8.22it/s, acc=0.896, loss=0.25]
+loss 0.250, train acc 0.896, val loss 0.249, val acc 0.897,
+27754.7 examples/sec on cuda:0
+Epoch [55/100]: 100%|██| 235/235 [00:28<00:00,  8.21it/s, acc=0.896, loss=0.249]
+loss 0.249, train acc 0.896, val loss 0.247, val acc 0.897,
+27301.0 examples/sec on cuda:0
+Epoch [56/100]: 100%|██| 235/235 [00:28<00:00,  8.15it/s, acc=0.897, loss=0.248]
+loss 0.248, train acc 0.897, val loss 0.248, val acc 0.897,
+26820.6 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [57/100]: 100%|███| 235/235 [00:28<00:00,  8.16it/s, acc=0.897, loss=0.25]
+loss 0.250, train acc 0.897, val loss 0.252, val acc 0.896,
+26320.5 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [58/100]: 100%|██| 235/235 [00:28<00:00,  8.16it/s, acc=0.894, loss=0.255]
+loss 0.255, train acc 0.894, val loss 0.254, val acc 0.895,
+25856.0 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [59/100]: 100%|██| 235/235 [00:29<00:00,  8.06it/s, acc=0.896, loss=0.252]
+loss 0.252, train acc 0.896, val loss 0.254, val acc 0.895,
+25383.2 examples/sec on cuda:0
+EarlyStopping counter: 4 out of 10
+Epoch    60: reducing learning rate of group 0 to 2.5000e-04.
+Epoch [60/100]: 100%|██| 235/235 [00:29<00:00,  8.03it/s, acc=0.897, loss=0.246]
+loss 0.246, train acc 0.897, val loss 0.245, val acc 0.897,
+24967.5 examples/sec on cuda:0
+Epoch [61/100]: 100%|██| 235/235 [00:29<00:00,  8.03it/s, acc=0.898, loss=0.242]
+loss 0.242, train acc 0.898, val loss 0.241, val acc 0.898,
+24566.5 examples/sec on cuda:0
+Epoch [62/100]: 100%|██| 235/235 [00:27<00:00,  8.51it/s, acc=0.897, loss=0.242]
+loss 0.242, train acc 0.897, val loss 0.239, val acc 0.898,
+24207.6 examples/sec on cuda:0
+Epoch [63/100]: 100%|████| 235/235 [00:28<00:00,  8.18it/s, acc=0.9, loss=0.235]
+loss 0.235, train acc 0.900, val loss 0.239, val acc 0.899,
+23859.0 examples/sec on cuda:0
+Epoch [64/100]: 100%|██| 235/235 [00:29<00:00,  8.03it/s, acc=0.898, loss=0.239]
+loss 0.239, train acc 0.898, val loss 0.238, val acc 0.899,
+23489.5 examples/sec on cuda:0
+Epoch [65/100]: 100%|██| 235/235 [00:29<00:00,  8.04it/s, acc=0.899, loss=0.238]
+loss 0.238, train acc 0.899, val loss 0.238, val acc 0.899,
+23131.3 examples/sec on cuda:0
+Epoch [66/100]: 100%|██| 235/235 [00:29<00:00,  8.01it/s, acc=0.899, loss=0.238]
+loss 0.238, train acc 0.899, val loss 0.238, val acc 0.899,
+22786.3 examples/sec on cuda:0
+Epoch [67/100]: 100%|██| 235/235 [00:28<00:00,  8.27it/s, acc=0.899, loss=0.236]
+loss 0.236, train acc 0.899, val loss 0.237, val acc 0.899,
+22457.9 examples/sec on cuda:0
+Epoch [68/100]: 100%|██| 235/235 [00:28<00:00,  8.27it/s, acc=0.898, loss=0.238]
+loss 0.238, train acc 0.898, val loss 0.238, val acc 0.898,
+22138.5 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [69/100]: 100%|██| 235/235 [00:28<00:00,  8.33it/s, acc=0.899, loss=0.237]
+loss 0.237, train acc 0.899, val loss 0.239, val acc 0.898,
+21842.5 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [70/100]: 100%|██| 235/235 [00:28<00:00,  8.17it/s, acc=0.897, loss=0.243]
+loss 0.243, train acc 0.897, val loss 0.243, val acc 0.897,
+21549.4 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [71/100]: 100%|██| 235/235 [00:29<00:00,  8.06it/s, acc=0.896, loss=0.245]
+loss 0.245, train acc 0.896, val loss 0.244, val acc 0.897,
+21262.5 examples/sec on cuda:0
+EarlyStopping counter: 4 out of 10
+Epoch    72: reducing learning rate of group 0 to 1.2500e-04.
+Epoch [72/100]: 100%|██| 235/235 [00:29<00:00,  7.94it/s, acc=0.899, loss=0.237]
+loss 0.237, train acc 0.899, val loss 0.238, val acc 0.899,
+20944.9 examples/sec on cuda:0
+EarlyStopping counter: 5 out of 10
+Epoch [73/100]: 100%|██| 235/235 [00:27<00:00,  8.51it/s, acc=0.899, loss=0.237]
+loss 0.237, train acc 0.899, val loss 0.237, val acc 0.899,
+20676.2 examples/sec on cuda:0
+Epoch [74/100]: 100%|██| 235/235 [00:28<00:00,  8.11it/s, acc=0.898, loss=0.238]
+loss 0.238, train acc 0.898, val loss 0.236, val acc 0.899,
+20403.0 examples/sec on cuda:0
+Epoch [75/100]: 100%|██| 235/235 [00:29<00:00,  8.03it/s, acc=0.899, loss=0.237]
+loss 0.237, train acc 0.899, val loss 0.236, val acc 0.899,
+20136.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [76/100]: 100%|████| 235/235 [00:29<00:00,  8.10it/s, acc=0.9, loss=0.234]
+loss 0.234, train acc 0.900, val loss 0.235, val acc 0.899,
+19879.6 examples/sec on cuda:0
+Epoch [77/100]: 100%|████| 235/235 [00:29<00:00,  7.87it/s, acc=0.9, loss=0.232]
+loss 0.232, train acc 0.900, val loss 0.235, val acc 0.899,
+19591.7 examples/sec on cuda:0
+Epoch [78/100]: 100%|████| 235/235 [00:27<00:00,  8.39it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.235, val acc 0.899,
+19350.8 examples/sec on cuda:0
+Epoch [79/100]: 100%|██| 235/235 [00:28<00:00,  8.34it/s, acc=0.899, loss=0.236]
+loss 0.236, train acc 0.899, val loss 0.235, val acc 0.899,
+19117.2 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [80/100]: 100%|████| 235/235 [00:29<00:00,  8.00it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.235, val acc 0.899,
+18857.2 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [81/100]: 100%|██| 235/235 [00:28<00:00,  8.12it/s, acc=0.899, loss=0.236]
+loss 0.236, train acc 0.899, val loss 0.235, val acc 0.899,
+18621.8 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [82/100]: 100%|██| 235/235 [00:29<00:00,  8.08it/s, acc=0.899, loss=0.235]
+loss 0.235, train acc 0.899, val loss 0.235, val acc 0.899,
+18416.7 examples/sec on cuda:0
+EarlyStopping counter: 4 out of 10
+Epoch    83: reducing learning rate of group 0 to 6.2500e-05.
+Epoch [83/100]: 100%|████| 235/235 [00:28<00:00,  8.32it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.235, val acc 0.899,
+18206.9 examples/sec on cuda:0
+Epoch [84/100]: 100%|████| 235/235 [00:29<00:00,  8.01it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.234, val acc 0.899,
+17965.0 examples/sec on cuda:0
+Epoch [85/100]: 100%|██| 235/235 [00:29<00:00,  7.99it/s, acc=0.899, loss=0.235]
+loss 0.235, train acc 0.899, val loss 0.234, val acc 0.899,
+17751.5 examples/sec on cuda:0
+Epoch [86/100]: 100%|██| 235/235 [00:29<00:00,  8.06it/s, acc=0.899, loss=0.233]
+loss 0.233, train acc 0.899, val loss 0.234, val acc 0.899,
+17533.6 examples/sec on cuda:0
+Epoch [87/100]: 100%|██| 235/235 [00:28<00:00,  8.17it/s, acc=0.899, loss=0.235]
+loss 0.235, train acc 0.899, val loss 0.234, val acc 0.899,
+17347.0 examples/sec on cuda:0
+Epoch [88/100]: 100%|████| 235/235 [00:28<00:00,  8.11it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.234, val acc 0.899,
+17141.1 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [89/100]: 100%|██| 235/235 [00:28<00:00,  8.23it/s, acc=0.898, loss=0.236]
+loss 0.236, train acc 0.898, val loss 0.234, val acc 0.899,
+16958.4 examples/sec on cuda:0
+Epoch [90/100]: 100%|██| 235/235 [00:29<00:00,  7.92it/s, acc=0.898, loss=0.236]
+loss 0.236, train acc 0.898, val loss 0.234, val acc 0.899,
+16764.9 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [91/100]: 100%|██| 235/235 [00:28<00:00,  8.39it/s, acc=0.899, loss=0.235]
+loss 0.235, train acc 0.899, val loss 0.234, val acc 0.899,
+16594.7 examples/sec on cuda:0
+Epoch [92/100]: 100%|██| 235/235 [00:28<00:00,  8.13it/s, acc=0.898, loss=0.237]
+loss 0.237, train acc 0.898, val loss 0.234, val acc 0.899,
+16398.4 examples/sec on cuda:0
+Epoch [93/100]: 100%|████| 235/235 [00:28<00:00,  8.19it/s, acc=0.9, loss=0.233]
+loss 0.233, train acc 0.900, val loss 0.234, val acc 0.899,
+16223.3 examples/sec on cuda:0
+Epoch [94/100]: 100%|██| 235/235 [00:28<00:00,  8.36it/s, acc=0.899, loss=0.234]
+loss 0.234, train acc 0.899, val loss 0.234, val acc 0.899,
+16063.8 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [95/100]: 100%|██| 235/235 [00:29<00:00,  8.02it/s, acc=0.899, loss=0.234]
+loss 0.234, train acc 0.899, val loss 0.234, val acc 0.899,
+15891.7 examples/sec on cuda:0
+Epoch [96/100]: 100%|██| 235/235 [00:29<00:00,  8.02it/s, acc=0.899, loss=0.233]
+loss 0.233, train acc 0.899, val loss 0.234, val acc 0.899,
+15714.8 examples/sec on cuda:0
+EarlyStopping counter: 1 out of 10
+Epoch [97/100]: 100%|██| 235/235 [00:28<00:00,  8.22it/s, acc=0.899, loss=0.235]
+loss 0.235, train acc 0.899, val loss 0.234, val acc 0.899,
+15561.7 examples/sec on cuda:0
+EarlyStopping counter: 2 out of 10
+Epoch [98/100]: 100%|██| 235/235 [00:28<00:00,  8.24it/s, acc=0.898, loss=0.236]
+loss 0.236, train acc 0.898, val loss 0.234, val acc 0.899,
+15414.7 examples/sec on cuda:0
+EarlyStopping counter: 3 out of 10
+Epoch [99/100]: 100%|████| 235/235 [00:29<00:00,  8.08it/s, acc=0.9, loss=0.231]
+loss 0.231, train acc 0.900, val loss 0.234, val acc 0.899,
+15271.6 examples/sec on cuda:0
+EarlyStopping counter: 4 out of 10
+Epoch   100: reducing learning rate of group 0 to 3.1250e-05.
+-------------Test Set Evaluation----------
+test acc 0.831
+    epoch      loss       acc   val_acc  val_loss
+0       0  2.001890  0.254966  0.276967  1.944375
+1       1  1.560811  0.456782  0.467633  1.524445
+2       2  1.345144  0.541120  0.545733  1.334440
+3       3  1.220390  0.590155  0.599250  1.211940
+4       4  1.052511  0.657455  0.661083  1.031806
+5       5  0.868651  0.740816  0.748400  0.846809
+6       6  0.702235  0.788543  0.790933  0.685408
+7       7  0.611173  0.802319  0.804883  0.600952
+8       8  0.563100  0.813539  0.814533  0.556204
+9       9  0.525051  0.821912  0.821917  0.525431
+10     10  0.516040  0.824801  0.825533  0.513339
+11     11  0.495030  0.830327  0.831567  0.491865
+12     12  0.487020  0.832322  0.832650  0.484637
+13     13  0.469133  0.836997  0.836783  0.468979
+14     14  0.465484  0.838846  0.840267  0.459820
+15     15  0.445246  0.843355  0.843317  0.444507
+16     16  0.442569  0.845433  0.845400  0.439474
+17     17  0.434053  0.846451  0.847300  0.430916
+18     18  0.426385  0.848799  0.849950  0.422586
+19     19  0.415735  0.852207  0.851883  0.415826
+20     20  0.401469  0.856362  0.854417  0.406514
+21     21  0.411608  0.851999  0.853033  0.407141
+22     22  0.396604  0.857380  0.857067  0.396337
+23     23  0.390732  0.859936  0.860233  0.390099
+24     24  0.376659  0.863842  0.863383  0.377187
+25     25  0.373404  0.864258  0.864483  0.372433
+26     26  0.370738  0.864736  0.864967  0.369207
+27     27  0.371748  0.863634  0.863883  0.372484
+28     28  0.360297  0.867146  0.866767  0.360789
+29     29  0.349560  0.871468  0.871367  0.349599
+30     30  0.348242  0.871281  0.870733  0.349955
+31     31  0.348085  0.871655  0.872733  0.343466
+32     32  0.333800  0.874896  0.875633  0.331320
+33     33  0.335988  0.873816  0.875283  0.331662
+34     34  0.343099  0.871863  0.872400  0.341466
+35     35  0.325926  0.876288  0.875767  0.328283
+36     36  0.322566  0.877992  0.878317  0.321256
+37     37  0.317666  0.879280  0.878983  0.318081
+38     38  0.312478  0.880402  0.880050  0.312930
+39     39  0.313677  0.880028  0.879150  0.316690
+40     40  0.307043  0.882002  0.883133  0.304530
+41     41  0.310945  0.881046  0.882100  0.307291
+42     42  0.293245  0.886282  0.886950  0.290879
+43     43  0.305361  0.883831  0.882717  0.305731
+44     44  0.299321  0.883810  0.883917  0.299048
+45     45  0.294133  0.885347  0.885350  0.293248
+46     46  0.286491  0.888152  0.887467  0.287735
+47     47  0.285580  0.887259  0.886633  0.288658
+48     48  0.299333  0.882937  0.884200  0.296182
+49     49  0.300563  0.883124  0.883767  0.299501
+50     50  0.293711  0.884703  0.885200  0.291602
+51     51  0.263883  0.893513  0.893317  0.263485
+52     52  0.255040  0.895404  0.896117  0.252739
+53     53  0.250215  0.896567  0.896583  0.250020
+54     54  0.250038  0.896193  0.896717  0.248942
+55     55  0.248715  0.896443  0.897150  0.246800
+56     56  0.248174  0.896547  0.896600  0.247816
+57     57  0.250110  0.896526  0.895800  0.251587
+58     58  0.254994  0.894490  0.894983  0.253795
+59     59  0.252313  0.895529  0.895183  0.253552
+60     60  0.246473  0.897128  0.897350  0.245493
+61     61  0.241984  0.897897  0.898183  0.240889
+62     62  0.242194  0.897191  0.898433  0.239343
+63     63  0.235227  0.900058  0.898533  0.238702
+64     64  0.239373  0.898271  0.898600  0.238326
+65     65  0.237546  0.898687  0.898583  0.237708
+66     66  0.237852  0.898583  0.898600  0.237599
+67     67  0.236264  0.899248  0.898767  0.237222
+68     68  0.238101  0.898458  0.898283  0.238407
+69     69  0.237411  0.899206  0.898217  0.239385
+70     70  0.243445  0.897170  0.897433  0.242912
+71     71  0.245417  0.896443  0.896717  0.244433
+72     72  0.237214  0.899206  0.898617  0.238266
+73     73  0.237383  0.898521  0.898633  0.236786
+74     74  0.237600  0.898084  0.898833  0.235813
+75     75  0.236919  0.898521  0.898900  0.235845
+76     76  0.234143  0.899539  0.898933  0.235375
+77     77  0.231764  0.900495  0.898917  0.235299
+78     78  0.232963  0.899892  0.898917  0.234990
+79     79  0.235699  0.898708  0.898933  0.234998
+80     80  0.233002  0.899850  0.898900  0.235149
+81     81  0.235918  0.898521  0.898783  0.235223
+82     82  0.235416  0.898749  0.898883  0.235004
+83     83  0.233149  0.899684  0.899067  0.234574
+84     84  0.233427  0.899518  0.899067  0.234322
+85     85  0.234569  0.898895  0.899000  0.234258
+86     86  0.233107  0.899476  0.898983  0.234172
+87     87  0.234732  0.898791  0.899050  0.234058
+88     88  0.232777  0.899747  0.899050  0.234198
+89     89  0.235738  0.898334  0.899100  0.233992
+90     90  0.235538  0.898500  0.899067  0.234057
+91     91  0.235051  0.898562  0.899050  0.233901
+92     92  0.237007  0.897752  0.899133  0.233751
+93     93  0.232654  0.899560  0.899133  0.233611
+94     94  0.233924  0.899061  0.899167  0.233616
+95     95  0.234112  0.898895  0.899117  0.233544
+96     96  0.233368  0.899248  0.899050  0.233686
+97     97  0.234944  0.898708  0.899017  0.234073
+98     98  0.235725  0.898209  0.899100  0.233672
+99     99  0.230936  0.900266  0.899000  0.233803

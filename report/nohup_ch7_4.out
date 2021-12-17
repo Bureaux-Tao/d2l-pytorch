@@ -1,0 +1,679 @@
+Sequential(
+  (0): Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3))
+  (1): ReLU()
+  (2): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (3): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+  (4): ReLU()
+  (5): Conv2d(64, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (6): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (7): Inception(
+    (p1_1): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(192, 96, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(192, 16, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (8): Inception(
+    (p1_1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(128, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(256, 32, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(32, 96, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (9): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (10): Inception(
+    (p1_1): Conv2d(480, 192, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(480, 96, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(96, 208, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(480, 16, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(16, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(480, 64, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (11): Inception(
+    (p1_1): Conv2d(512, 160, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(112, 224, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(24, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (12): Inception(
+    (p1_1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(24, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (13): Inception(
+    (p1_1): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(512, 144, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(144, 288, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (14): Inception(
+    (p1_1): Conv2d(528, 256, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(528, 160, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(528, 32, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(32, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(528, 128, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (15): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (16): Inception(
+    (p1_1): Conv2d(832, 256, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(832, 160, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(832, 32, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(32, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (17): Inception(
+    (p1_1): Conv2d(832, 384, kernel_size=(1, 1), stride=(1, 1))
+    (p2_1): Conv2d(832, 192, kernel_size=(1, 1), stride=(1, 1))
+    (p2_2): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (p3_1): Conv2d(832, 48, kernel_size=(1, 1), stride=(1, 1))
+    (p3_2): Conv2d(48, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (p4_1): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+    (p4_2): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1))
+    (relu): ReLU()
+  )
+  (18): AdaptiveAvgPool2d(output_size=(1, 1))
+  (19): Flatten()
+  (20): Dropout(p=0.2, inplace=False)
+  (21): Linear(in_features=1024, out_features=10, bias=True)
+)
+Conv2d          output shape:	 torch.Size([1, 64, 48, 48])
+ReLU            output shape:	 torch.Size([1, 64, 48, 48])
+MaxPool2d       output shape:	 torch.Size([1, 64, 24, 24])
+Conv2d          output shape:	 torch.Size([1, 64, 24, 24])
+ReLU            output shape:	 torch.Size([1, 64, 24, 24])
+Conv2d          output shape:	 torch.Size([1, 192, 24, 24])
+MaxPool2d       output shape:	 torch.Size([1, 192, 12, 12])
+Inception       output shape:	 torch.Size([1, 256, 12, 12])
+Inception       output shape:	 torch.Size([1, 480, 12, 12])
+MaxPool2d       output shape:	 torch.Size([1, 480, 6, 6])
+Inception       output shape:	 torch.Size([1, 512, 6, 6])
+Inception       output shape:	 torch.Size([1, 512, 6, 6])
+Inception       output shape:	 torch.Size([1, 512, 6, 6])
+Inception       output shape:	 torch.Size([1, 528, 6, 6])
+Inception       output shape:	 torch.Size([1, 832, 6, 6])
+MaxPool2d       output shape:	 torch.Size([1, 832, 3, 3])
+Inception       output shape:	 torch.Size([1, 832, 3, 3])
+Inception       output shape:	 torch.Size([1, 1024, 3, 3])
+AdaptiveAvgPool2d output shape:	 torch.Size([1, 1024, 1, 1])
+Flatten         output shape:	 torch.Size([1, 1024])
+Dropout         output shape:	 torch.Size([1, 1024])
+Linear          output shape:	 torch.Size([1, 10])
+training on cuda:0
+Epoch [0/100]: 100%|████| 469/469 [00:17<00:00, 26.69it/s, acc=0.171, loss=2.23]
+Train Loss:2.2330  Train Acc: 0.1714
+Val Loss:2.1784  Val Acc:0.1743
+test acc 0.175
+Train and val complete in 0m 19s
+Epoch [1/100]: 100%|████| 469/469 [00:17<00:00, 27.00it/s, acc=0.576, loss=1.09]
+Train Loss:1.0888  Train Acc: 0.5763
+Val Loss:0.6281  Val Acc:0.7585
+test acc 0.751
+Train and val complete in 0m 38s
+Epoch [2/100]: 100%|████| 469/469 [00:18<00:00, 25.29it/s, acc=0.771, loss=0.61]
+Train Loss:0.6100  Train Acc: 0.7707
+Val Loss:0.5568  Val Acc:0.7937
+test acc 0.790
+Train and val complete in 0m 59s
+Epoch [3/100]: 100%|███| 469/469 [00:20<00:00, 23.40it/s, acc=0.819, loss=0.478]
+Train Loss:0.4776  Train Acc: 0.8192
+Val Loss:0.4248  Val Acc:0.8386
+test acc 0.831
+Train and val complete in 1m 21s
+Epoch [4/100]: 100%|███| 469/469 [00:19<00:00, 23.68it/s, acc=0.838, loss=0.428]
+Train Loss:0.4282  Train Acc: 0.8380
+Val Loss:0.4199  Val Acc:0.8407
+test acc 0.832
+Train and val complete in 1m 42s
+Epoch [5/100]: 100%|███| 469/469 [00:20<00:00, 22.79it/s, acc=0.852, loss=0.393]
+Train Loss:0.3932  Train Acc: 0.8515
+Val Loss:0.3715  Val Acc:0.8578
+test acc 0.845
+Train and val complete in 2m 4s
+Epoch [6/100]: 100%|███| 469/469 [00:20<00:00, 22.58it/s, acc=0.862, loss=0.363]
+Train Loss:0.3626  Train Acc: 0.8619
+Val Loss:0.3539  Val Acc:0.8682
+test acc 0.863
+Train and val complete in 2m 27s
+Epoch [7/100]: 100%|███| 469/469 [00:20<00:00, 22.78it/s, acc=0.869, loss=0.346]
+Train Loss:0.3464  Train Acc: 0.8688
+Val Loss:0.3428  Val Acc:0.8718
+test acc 0.861
+Train and val complete in 2m 49s
+Epoch [8/100]: 100%|███| 469/469 [00:21<00:00, 22.15it/s, acc=0.876, loss=0.329]
+Train Loss:0.3292  Train Acc: 0.8757
+Val Loss:0.3273  Val Acc:0.8770
+test acc 0.865
+Train and val complete in 3m 12s
+Epoch [9/100]: 100%|████| 469/469 [00:18<00:00, 25.18it/s, acc=0.88, loss=0.322]
+Train Loss:0.3223  Train Acc: 0.8800
+Val Loss:0.3034  Val Acc:0.8794
+test acc 0.865
+Train and val complete in 3m 32s
+Epoch [10/100]: 100%|██| 469/469 [00:21<00:00, 22.06it/s, acc=0.882, loss=0.312]
+Train Loss:0.3120  Train Acc: 0.8824
+Val Loss:0.2977  Val Acc:0.8899
+test acc 0.873
+Train and val complete in 3m 55s
+Epoch [11/100]: 100%|████| 469/469 [00:20<00:00, 23.26it/s, acc=0.8, loss=0.561]
+Train Loss:0.5606  Train Acc: 0.8000
+Val Loss:0.3370  Val Acc:0.8742
+test acc 0.861
+Train and val complete in 4m 17s
+EarlyStopping counter: 1 out of 10
+Epoch [12/100]: 100%|██| 469/469 [00:20<00:00, 23.02it/s, acc=0.881, loss=0.318]
+Train Loss:0.3180  Train Acc: 0.8809
+Val Loss:0.2945  Val Acc:0.8885
+test acc 0.872
+Train and val complete in 4m 39s
+Epoch [13/100]: 100%|██| 469/469 [00:21<00:00, 21.55it/s, acc=0.889, loss=0.296]
+Train Loss:0.2960  Train Acc: 0.8890
+Val Loss:0.2995  Val Acc:0.8881
+test acc 0.877
+Train and val complete in 5m 3s
+EarlyStopping counter: 1 out of 10
+Epoch [14/100]: 100%|██| 469/469 [00:21<00:00, 21.44it/s, acc=0.892, loss=0.282]
+Train Loss:0.2824  Train Acc: 0.8924
+Val Loss:0.2738  Val Acc:0.9009
+test acc 0.887
+Train and val complete in 5m 27s
+Epoch [15/100]: 100%|██| 469/469 [00:20<00:00, 23.12it/s, acc=0.895, loss=0.277]
+Train Loss:0.2765  Train Acc: 0.8950
+Val Loss:0.2887  Val Acc:0.8918
+test acc 0.877
+Train and val complete in 5m 49s
+EarlyStopping counter: 1 out of 10
+Epoch [16/100]: 100%|████| 469/469 [00:21<00:00, 22.11it/s, acc=0.9, loss=0.268]
+Train Loss:0.2675  Train Acc: 0.9004
+Val Loss:0.2613  Val Acc:0.9022
+test acc 0.889
+Train and val complete in 6m 11s
+Epoch [17/100]: 100%|██| 469/469 [00:20<00:00, 22.77it/s, acc=0.903, loss=0.259]
+Train Loss:0.2587  Train Acc: 0.9032
+Val Loss:0.2466  Val Acc:0.9103
+test acc 0.895
+Train and val complete in 6m 34s
+Epoch [18/100]: 100%|██| 469/469 [00:20<00:00, 22.54it/s, acc=0.904, loss=0.255]
+Train Loss:0.2550  Train Acc: 0.9040
+Val Loss:0.2524  Val Acc:0.9046
+test acc 0.890
+Train and val complete in 6m 56s
+EarlyStopping counter: 1 out of 10
+Epoch [19/100]: 100%|██| 469/469 [00:20<00:00, 22.53it/s, acc=0.906, loss=0.247]
+Train Loss:0.2474  Train Acc: 0.9062
+Val Loss:0.2627  Val Acc:0.9021
+test acc 0.889
+Train and val complete in 7m 19s
+EarlyStopping counter: 2 out of 10
+Epoch [20/100]: 100%|██| 469/469 [00:20<00:00, 22.86it/s, acc=0.908, loss=0.246]
+Train Loss:0.2463  Train Acc: 0.9081
+Val Loss:0.2221  Val Acc:0.9155
+test acc 0.898
+Train and val complete in 7m 41s
+Epoch [21/100]: 100%|██| 469/469 [00:20<00:00, 22.76it/s, acc=0.911, loss=0.239]
+Train Loss:0.2390  Train Acc: 0.9106
+Val Loss:0.2240  Val Acc:0.9158
+test acc 0.894
+Train and val complete in 8m 3s
+EarlyStopping counter: 1 out of 10
+Epoch [22/100]: 100%|██| 469/469 [00:20<00:00, 22.34it/s, acc=0.912, loss=0.235]
+Train Loss:0.2347  Train Acc: 0.9115
+Val Loss:0.2253  Val Acc:0.9133
+test acc 0.894
+Train and val complete in 8m 26s
+EarlyStopping counter: 2 out of 10
+Epoch [23/100]: 100%|██| 469/469 [00:20<00:00, 22.48it/s, acc=0.915, loss=0.226]
+Train Loss:0.2262  Train Acc: 0.9148
+Val Loss:0.2320  Val Acc:0.9124
+test acc 0.896
+Train and val complete in 8m 48s
+EarlyStopping counter: 3 out of 10
+Epoch [24/100]: 100%|██| 469/469 [00:20<00:00, 22.77it/s, acc=0.916, loss=0.224]
+Train Loss:0.2244  Train Acc: 0.9158
+Val Loss:0.2084  Val Acc:0.9246
+test acc 0.898
+Train and val complete in 9m 10s
+Epoch [25/100]: 100%|███| 469/469 [00:21<00:00, 22.19it/s, acc=0.917, loss=0.22]
+Train Loss:0.2204  Train Acc: 0.9173
+Val Loss:0.2096  Val Acc:0.9208
+test acc 0.902
+Train and val complete in 9m 33s
+EarlyStopping counter: 1 out of 10
+Epoch [26/100]: 100%|██| 469/469 [00:20<00:00, 23.04it/s, acc=0.921, loss=0.216]
+Train Loss:0.2160  Train Acc: 0.9206
+Val Loss:0.2417  Val Acc:0.9119
+test acc 0.894
+Train and val complete in 9m 55s
+EarlyStopping counter: 2 out of 10
+Epoch [27/100]: 100%|██| 469/469 [00:20<00:00, 23.24it/s, acc=0.922, loss=0.214]
+Train Loss:0.2137  Train Acc: 0.9219
+Val Loss:0.2403  Val Acc:0.9097
+test acc 0.892
+Train and val complete in 10m 17s
+EarlyStopping counter: 3 out of 10
+Epoch [28/100]: 100%|██| 469/469 [00:20<00:00, 22.43it/s, acc=0.923, loss=0.209]
+Train Loss:0.2088  Train Acc: 0.9228
+Val Loss:0.2103  Val Acc:0.9222
+test acc 0.900
+Train and val complete in 10m 40s
+EarlyStopping counter: 4 out of 10
+Epoch    29: reducing learning rate of group 0 to 1.2500e-02.
+Epoch [29/100]: 100%|███| 469/469 [00:21<00:00, 22.11it/s, acc=0.94, loss=0.165]
+Train Loss:0.1646  Train Acc: 0.9402
+Val Loss:0.1576  Val Acc:0.9412
+test acc 0.911
+Train and val complete in 11m 2s
+Epoch [30/100]: 100%|██| 469/469 [00:20<00:00, 22.65it/s, acc=0.943, loss=0.158]
+Train Loss:0.1581  Train Acc: 0.9428
+Val Loss:0.1506  Val Acc:0.9429
+test acc 0.912
+Train and val complete in 11m 25s
+Epoch [31/100]: 100%|██| 469/469 [00:20<00:00, 22.49it/s, acc=0.945, loss=0.152]
+Train Loss:0.1522  Train Acc: 0.9449
+Val Loss:0.1458  Val Acc:0.9478
+test acc 0.912
+Train and val complete in 11m 47s
+Epoch [32/100]: 100%|███| 469/469 [00:21<00:00, 22.00it/s, acc=0.946, loss=0.15]
+Train Loss:0.1498  Train Acc: 0.9458
+Val Loss:0.1441  Val Acc:0.9468
+test acc 0.912
+Train and val complete in 12m 11s
+Epoch [33/100]: 100%|██| 469/469 [00:20<00:00, 23.01it/s, acc=0.947, loss=0.146]
+Train Loss:0.1462  Train Acc: 0.9474
+Val Loss:0.1376  Val Acc:0.9509
+test acc 0.912
+Train and val complete in 12m 33s
+Epoch [34/100]: 100%|██| 469/469 [00:20<00:00, 22.67it/s, acc=0.948, loss=0.143]
+Train Loss:0.1433  Train Acc: 0.9477
+Val Loss:0.1392  Val Acc:0.9486
+test acc 0.913
+Train and val complete in 12m 55s
+EarlyStopping counter: 1 out of 10
+Epoch [35/100]: 100%|██| 469/469 [00:21<00:00, 21.95it/s, acc=0.951, loss=0.138]
+Train Loss:0.1385  Train Acc: 0.9505
+Val Loss:0.1318  Val Acc:0.9541
+test acc 0.912
+Train and val complete in 13m 18s
+Epoch [36/100]: 100%|██| 469/469 [00:20<00:00, 22.67it/s, acc=0.951, loss=0.135]
+Train Loss:0.1352  Train Acc: 0.9507
+Val Loss:0.1420  Val Acc:0.9495
+test acc 0.910
+Train and val complete in 13m 41s
+EarlyStopping counter: 1 out of 10
+Epoch [37/100]: 100%|███| 469/469 [00:20<00:00, 22.45it/s, acc=0.95, loss=0.136]
+Train Loss:0.1362  Train Acc: 0.9503
+Val Loss:0.1264  Val Acc:0.9558
+test acc 0.912
+Train and val complete in 14m 3s
+Epoch [38/100]: 100%|██| 469/469 [00:21<00:00, 22.31it/s, acc=0.951, loss=0.133]
+Train Loss:0.1326  Train Acc: 0.9513
+Val Loss:0.1249  Val Acc:0.9556
+test acc 0.914
+Train and val complete in 14m 26s
+Epoch [39/100]: 100%|██| 469/469 [00:20<00:00, 22.88it/s, acc=0.953, loss=0.131]
+Train Loss:0.1310  Train Acc: 0.9533
+Val Loss:0.1250  Val Acc:0.9547
+test acc 0.912
+Train and val complete in 14m 48s
+EarlyStopping counter: 1 out of 10
+Epoch [40/100]: 100%|██| 469/469 [00:20<00:00, 22.57it/s, acc=0.954, loss=0.128]
+Train Loss:0.1275  Train Acc: 0.9540
+Val Loss:0.1222  Val Acc:0.9548
+test acc 0.914
+Train and val complete in 15m 11s
+Epoch [41/100]: 100%|██| 469/469 [00:20<00:00, 22.73it/s, acc=0.955, loss=0.125]
+Train Loss:0.1245  Train Acc: 0.9549
+Val Loss:0.1161  Val Acc:0.9590
+test acc 0.913
+Train and val complete in 15m 33s
+Epoch [42/100]: 100%|██| 469/469 [00:20<00:00, 22.97it/s, acc=0.956, loss=0.123]
+Train Loss:0.1228  Train Acc: 0.9558
+Val Loss:0.1097  Val Acc:0.9625
+test acc 0.912
+Train and val complete in 15m 55s
+Epoch [43/100]: 100%|██| 469/469 [00:20<00:00, 22.53it/s, acc=0.957, loss=0.119]
+Train Loss:0.1187  Train Acc: 0.9574
+Val Loss:0.1166  Val Acc:0.9575
+test acc 0.912
+Train and val complete in 16m 18s
+EarlyStopping counter: 1 out of 10
+Epoch [44/100]: 100%|██| 469/469 [00:20<00:00, 22.60it/s, acc=0.957, loss=0.119]
+Train Loss:0.1187  Train Acc: 0.9569
+Val Loss:0.1166  Val Acc:0.9560
+test acc 0.906
+Train and val complete in 16m 40s
+EarlyStopping counter: 2 out of 10
+Epoch [45/100]: 100%|██| 469/469 [00:20<00:00, 22.60it/s, acc=0.958, loss=0.115]
+Train Loss:0.1148  Train Acc: 0.9582
+Val Loss:0.1136  Val Acc:0.9587
+test acc 0.913
+Train and val complete in 17m 3s
+EarlyStopping counter: 3 out of 10
+Epoch [46/100]: 100%|██| 469/469 [00:20<00:00, 22.35it/s, acc=0.958, loss=0.114]
+Train Loss:0.1138  Train Acc: 0.9583
+Val Loss:0.1101  Val Acc:0.9623
+test acc 0.911
+Train and val complete in 17m 25s
+EarlyStopping counter: 4 out of 10
+Epoch    47: reducing learning rate of group 0 to 3.1250e-03.
+Epoch [47/100]: 100%|█| 469/469 [00:21<00:00, 21.92it/s, acc=0.972, loss=0.0874]
+Train Loss:0.0874  Train Acc: 0.9716
+Val Loss:0.0807  Val Acc:0.9738
+test acc 0.914
+Train and val complete in 17m 49s
+Epoch [48/100]: 100%|█| 469/469 [00:20<00:00, 22.96it/s, acc=0.973, loss=0.0827]
+Train Loss:0.0827  Train Acc: 0.9728
+Val Loss:0.0829  Val Acc:0.9737
+test acc 0.915
+Train and val complete in 18m 11s
+EarlyStopping counter: 1 out of 10
+Epoch [49/100]: 100%|█| 469/469 [00:21<00:00, 22.28it/s, acc=0.974, loss=0.0799]
+Train Loss:0.0799  Train Acc: 0.9738
+Val Loss:0.0820  Val Acc:0.9728
+test acc 0.914
+Train and val complete in 18m 33s
+EarlyStopping counter: 2 out of 10
+Epoch [50/100]: 100%|██| 469/469 [00:20<00:00, 22.98it/s, acc=0.974, loss=0.078]
+Train Loss:0.0780  Train Acc: 0.9742
+Val Loss:0.0775  Val Acc:0.9753
+test acc 0.914
+Train and val complete in 18m 56s
+Epoch [51/100]: 100%|█| 469/469 [00:20<00:00, 22.37it/s, acc=0.975, loss=0.0753]
+Train Loss:0.0753  Train Acc: 0.9754
+Val Loss:0.0817  Val Acc:0.9739
+test acc 0.914
+Train and val complete in 19m 18s
+EarlyStopping counter: 1 out of 10
+Epoch [52/100]: 100%|█| 469/469 [00:21<00:00, 21.68it/s, acc=0.976, loss=0.0744]
+Train Loss:0.0744  Train Acc: 0.9759
+Val Loss:0.0730  Val Acc:0.9752
+test acc 0.913
+Train and val complete in 19m 42s
+Epoch [53/100]: 100%|█| 469/469 [00:20<00:00, 22.39it/s, acc=0.976, loss=0.0733]
+Train Loss:0.0733  Train Acc: 0.9761
+Val Loss:0.0742  Val Acc:0.9757
+test acc 0.913
+Train and val complete in 20m 4s
+EarlyStopping counter: 1 out of 10
+Epoch [54/100]: 100%|█| 469/469 [00:20<00:00, 22.43it/s, acc=0.977, loss=0.0711]
+Train Loss:0.0711  Train Acc: 0.9772
+Val Loss:0.0722  Val Acc:0.9789
+test acc 0.916
+Train and val complete in 20m 27s
+Epoch [55/100]: 100%|█| 469/469 [00:21<00:00, 22.02it/s, acc=0.977, loss=0.0696]
+Train Loss:0.0696  Train Acc: 0.9771
+Val Loss:0.0719  Val Acc:0.9773
+test acc 0.911
+Train and val complete in 20m 50s
+Epoch [56/100]: 100%|██| 469/469 [00:20<00:00, 22.44it/s, acc=0.978, loss=0.067]
+Train Loss:0.0670  Train Acc: 0.9778
+Val Loss:0.0714  Val Acc:0.9756
+test acc 0.912
+Train and val complete in 21m 12s
+Epoch [57/100]: 100%|█| 469/469 [00:21<00:00, 22.17it/s, acc=0.979, loss=0.0677]
+Train Loss:0.0677  Train Acc: 0.9785
+Val Loss:0.0642  Val Acc:0.9798
+test acc 0.914
+Train and val complete in 21m 35s
+Epoch [58/100]: 100%|█| 469/469 [00:20<00:00, 22.80it/s, acc=0.979, loss=0.0659]
+Train Loss:0.0659  Train Acc: 0.9789
+Val Loss:0.0618  Val Acc:0.9808
+test acc 0.914
+Train and val complete in 21m 57s
+Epoch [59/100]: 100%|█| 469/469 [00:21<00:00, 22.22it/s, acc=0.979, loss=0.0643]
+Train Loss:0.0643  Train Acc: 0.9787
+Val Loss:0.0607  Val Acc:0.9816
+test acc 0.912
+Train and val complete in 22m 20s
+Epoch [60/100]: 100%|██| 469/469 [00:20<00:00, 22.88it/s, acc=0.98, loss=0.0618]
+Train Loss:0.0618  Train Acc: 0.9801
+Val Loss:0.0587  Val Acc:0.9823
+test acc 0.913
+Train and val complete in 22m 42s
+Epoch [61/100]: 100%|██| 469/469 [00:20<00:00, 22.41it/s, acc=0.98, loss=0.0609]
+Train Loss:0.0609  Train Acc: 0.9799
+Val Loss:0.0559  Val Acc:0.9845
+test acc 0.912
+Train and val complete in 23m 5s
+Epoch [62/100]: 100%|█| 469/469 [00:20<00:00, 22.44it/s, acc=0.981, loss=0.0583]
+Train Loss:0.0583  Train Acc: 0.9814
+Val Loss:0.0692  Val Acc:0.9761
+test acc 0.910
+Train and val complete in 23m 27s
+EarlyStopping counter: 1 out of 10
+Epoch [63/100]: 100%|█| 469/469 [00:20<00:00, 22.66it/s, acc=0.981, loss=0.0582]
+Train Loss:0.0582  Train Acc: 0.9810
+Val Loss:0.0556  Val Acc:0.9812
+test acc 0.912
+Train and val complete in 23m 50s
+Epoch [64/100]: 100%|█| 469/469 [00:20<00:00, 22.62it/s, acc=0.981, loss=0.0555]
+Train Loss:0.0555  Train Acc: 0.9815
+Val Loss:0.0595  Val Acc:0.9813
+test acc 0.913
+Train and val complete in 24m 12s
+EarlyStopping counter: 1 out of 10
+Epoch [65/100]: 100%|█| 469/469 [00:20<00:00, 22.73it/s, acc=0.982, loss=0.0552]
+Train Loss:0.0552  Train Acc: 0.9820
+Val Loss:0.0524  Val Acc:0.9845
+test acc 0.911
+Train and val complete in 24m 34s
+Epoch [66/100]: 100%|█| 469/469 [00:21<00:00, 22.15it/s, acc=0.984, loss=0.0521]
+Train Loss:0.0521  Train Acc: 0.9841
+Val Loss:0.0593  Val Acc:0.9805
+test acc 0.909
+Train and val complete in 24m 57s
+EarlyStopping counter: 1 out of 10
+Epoch [67/100]: 100%|██| 469/469 [00:20<00:00, 23.03it/s, acc=0.983, loss=0.053]
+Train Loss:0.0530  Train Acc: 0.9831
+Val Loss:0.0454  Val Acc:0.9863
+test acc 0.913
+Train and val complete in 25m 19s
+Epoch [68/100]: 100%|█| 469/469 [00:20<00:00, 22.62it/s, acc=0.984, loss=0.0518]
+Train Loss:0.0518  Train Acc: 0.9835
+Val Loss:0.0580  Val Acc:0.9800
+test acc 0.909
+Train and val complete in 25m 42s
+EarlyStopping counter: 1 out of 10
+Epoch [69/100]: 100%|█| 469/469 [00:21<00:00, 22.14it/s, acc=0.983, loss=0.0508]
+Train Loss:0.0508  Train Acc: 0.9833
+Val Loss:0.0491  Val Acc:0.9845
+test acc 0.910
+Train and val complete in 26m 4s
+EarlyStopping counter: 2 out of 10
+Epoch [70/100]: 100%|█| 469/469 [00:20<00:00, 22.71it/s, acc=0.984, loss=0.0491]
+Train Loss:0.0491  Train Acc: 0.9843
+Val Loss:0.0443  Val Acc:0.9878
+test acc 0.911
+Train and val complete in 26m 27s
+Epoch [71/100]: 100%|█| 469/469 [00:20<00:00, 22.48it/s, acc=0.986, loss=0.0467]
+Train Loss:0.0467  Train Acc: 0.9857
+Val Loss:0.0443  Val Acc:0.9858
+test acc 0.912
+Train and val complete in 26m 49s
+Epoch [72/100]: 100%|█| 469/469 [00:21<00:00, 22.17it/s, acc=0.985, loss=0.0466]
+Train Loss:0.0466  Train Acc: 0.9854
+Val Loss:0.0395  Val Acc:0.9887
+test acc 0.912
+Train and val complete in 27m 12s
+Epoch [73/100]: 100%|█| 469/469 [00:26<00:00, 17.99it/s, acc=0.986, loss=0.0443]
+Train Loss:0.0443  Train Acc: 0.9863
+Val Loss:0.0384  Val Acc:0.9892
+test acc 0.911
+Train and val complete in 27m 41s
+Epoch [74/100]: 100%|█| 469/469 [00:38<00:00, 12.33it/s, acc=0.987, loss=0.0425]
+Train Loss:0.0425  Train Acc: 0.9868
+Val Loss:0.0720  Val Acc:0.9722
+test acc 0.903
+Train and val complete in 28m 22s
+EarlyStopping counter: 1 out of 10
+Epoch [75/100]: 100%|█| 469/469 [00:36<00:00, 12.87it/s, acc=0.987, loss=0.0423]
+Train Loss:0.0423  Train Acc: 0.9871
+Val Loss:0.0415  Val Acc:0.9868
+test acc 0.910
+Train and val complete in 29m 1s
+EarlyStopping counter: 2 out of 10
+Epoch [76/100]: 100%|█| 469/469 [00:38<00:00, 12.31it/s, acc=0.985, loss=0.0446]
+Train Loss:0.0446  Train Acc: 0.9852
+Val Loss:0.0361  Val Acc:0.9901
+test acc 0.912
+Train and val complete in 29m 41s
+Epoch [77/100]: 100%|█| 469/469 [00:38<00:00, 12.04it/s, acc=0.986, loss=0.0419]
+Train Loss:0.0419  Train Acc: 0.9863
+Val Loss:0.0393  Val Acc:0.9874
+test acc 0.908
+Train and val complete in 30m 22s
+EarlyStopping counter: 1 out of 10
+Epoch [78/100]: 100%|█| 469/469 [00:38<00:00, 12.15it/s, acc=0.988, loss=0.0394]
+Train Loss:0.0394  Train Acc: 0.9880
+Val Loss:0.0369  Val Acc:0.9884
+test acc 0.912
+Train and val complete in 31m 3s
+EarlyStopping counter: 2 out of 10
+Epoch [79/100]: 100%|█| 469/469 [00:37<00:00, 12.51it/s, acc=0.989, loss=0.0368]
+Train Loss:0.0368  Train Acc: 0.9887
+Val Loss:0.0346  Val Acc:0.9902
+test acc 0.913
+Train and val complete in 31m 43s
+Epoch [80/100]: 100%|█| 469/469 [00:37<00:00, 12.57it/s, acc=0.988, loss=0.0384]
+Train Loss:0.0384  Train Acc: 0.9880
+Val Loss:0.0349  Val Acc:0.9908
+test acc 0.914
+Train and val complete in 32m 23s
+EarlyStopping counter: 1 out of 10
+Epoch [81/100]: 100%|█| 469/469 [00:37<00:00, 12.68it/s, acc=0.989, loss=0.0357]
+Train Loss:0.0357  Train Acc: 0.9894
+Val Loss:0.0349  Val Acc:0.9903
+test acc 0.912
+Train and val complete in 33m 3s
+EarlyStopping counter: 2 out of 10
+Epoch [82/100]: 100%|██| 469/469 [00:36<00:00, 12.74it/s, acc=0.99, loss=0.0334]
+Train Loss:0.0334  Train Acc: 0.9903
+Val Loss:0.0296  Val Acc:0.9918
+test acc 0.913
+Train and val complete in 33m 43s
+Epoch [83/100]: 100%|██| 469/469 [00:36<00:00, 12.69it/s, acc=0.99, loss=0.0345]
+Train Loss:0.0345  Train Acc: 0.9899
+Val Loss:0.0306  Val Acc:0.9912
+test acc 0.910
+Train and val complete in 34m 22s
+EarlyStopping counter: 1 out of 10
+Epoch [84/100]: 100%|█| 469/469 [00:37<00:00, 12.45it/s, acc=0.989, loss=0.0348]
+Train Loss:0.0348  Train Acc: 0.9894
+Val Loss:0.0432  Val Acc:0.9847
+test acc 0.908
+Train and val complete in 35m 3s
+EarlyStopping counter: 2 out of 10
+Epoch [85/100]: 100%|██| 469/469 [00:24<00:00, 19.52it/s, acc=0.99, loss=0.0349]
+Train Loss:0.0349  Train Acc: 0.9895
+Val Loss:0.0344  Val Acc:0.9893
+test acc 0.909
+Train and val complete in 35m 29s
+EarlyStopping counter: 3 out of 10
+Epoch [86/100]: 100%|█| 469/469 [00:20<00:00, 22.75it/s, acc=0.989, loss=0.0336]
+Train Loss:0.0336  Train Acc: 0.9889
+Val Loss:0.0342  Val Acc:0.9882
+test acc 0.909
+Train and val complete in 35m 51s
+EarlyStopping counter: 4 out of 10
+Epoch    87: reducing learning rate of group 0 to 7.8125e-04.
+Epoch [87/100]: 100%|█| 469/469 [00:20<00:00, 22.59it/s, acc=0.996, loss=0.0207]
+Train Loss:0.0207  Train Acc: 0.9962
+Val Loss:0.0176  Val Acc:0.9970
+test acc 0.913
+Train and val complete in 36m 13s
+Epoch [88/100]: 100%|██| 469/469 [00:20<00:00, 22.68it/s, acc=0.997, loss=0.019]
+Train Loss:0.0190  Train Acc: 0.9967
+Val Loss:0.0177  Val Acc:0.9972
+test acc 0.912
+Train and val complete in 36m 36s
+EarlyStopping counter: 1 out of 10
+Epoch [89/100]: 100%|█| 469/469 [00:20<00:00, 22.77it/s, acc=0.997, loss=0.0183]
+Train Loss:0.0183  Train Acc: 0.9969
+Val Loss:0.0174  Val Acc:0.9976
+test acc 0.913
+Train and val complete in 36m 58s
+Epoch [90/100]: 100%|█| 469/469 [00:21<00:00, 22.21it/s, acc=0.997, loss=0.0179]
+Train Loss:0.0179  Train Acc: 0.9972
+Val Loss:0.0159  Val Acc:0.9974
+test acc 0.913
+Train and val complete in 37m 21s
+Epoch [91/100]: 100%|█| 469/469 [00:21<00:00, 21.99it/s, acc=0.997, loss=0.0171]
+Train Loss:0.0171  Train Acc: 0.9971
+Val Loss:0.0166  Val Acc:0.9977
+test acc 0.911
+Train and val complete in 37m 44s
+EarlyStopping counter: 1 out of 10
+Epoch [92/100]: 100%|█| 469/469 [00:20<00:00, 22.57it/s, acc=0.997, loss=0.0168]
+Train Loss:0.0168  Train Acc: 0.9973
+Val Loss:0.0152  Val Acc:0.9983
+test acc 0.912
+Train and val complete in 38m 6s
+Epoch [93/100]: 100%|█| 469/469 [00:20<00:00, 23.05it/s, acc=0.997, loss=0.0164]
+Train Loss:0.0164  Train Acc: 0.9973
+Val Loss:0.0152  Val Acc:0.9980
+test acc 0.912
+Train and val complete in 38m 28s
+Epoch [94/100]: 100%|█| 469/469 [00:21<00:00, 21.99it/s, acc=0.998, loss=0.0157]
+Train Loss:0.0157  Train Acc: 0.9977
+Val Loss:0.0157  Val Acc:0.9976
+test acc 0.913
+Train and val complete in 38m 51s
+EarlyStopping counter: 1 out of 10
+Epoch [95/100]: 100%|█| 469/469 [00:20<00:00, 22.37it/s, acc=0.998, loss=0.0158]
+Train Loss:0.0158  Train Acc: 0.9975
+Val Loss:0.0142  Val Acc:0.9978
+test acc 0.913
+Train and val complete in 39m 14s
+Epoch [96/100]: 100%|█| 469/469 [00:20<00:00, 22.55it/s, acc=0.998, loss=0.0151]
+Train Loss:0.0151  Train Acc: 0.9978
+Val Loss:0.0140  Val Acc:0.9981
+test acc 0.912
+Train and val complete in 39m 37s
+Epoch [97/100]: 100%|██| 469/469 [00:20<00:00, 22.81it/s, acc=0.998, loss=0.015]
+Train Loss:0.0150  Train Acc: 0.9980
+Val Loss:0.0141  Val Acc:0.9978
+test acc 0.912
+Train and val complete in 39m 59s
+EarlyStopping counter: 1 out of 10
+Epoch [98/100]: 100%|█| 469/469 [00:20<00:00, 22.65it/s, acc=0.998, loss=0.0144]
+Train Loss:0.0144  Train Acc: 0.9980
+Val Loss:0.0143  Val Acc:0.9980
+test acc 0.912
+Train and val complete in 40m 21s
+EarlyStopping counter: 2 out of 10
+Epoch [99/100]: 100%|█| 469/469 [00:20<00:00, 22.78it/s, acc=0.998, loss=0.0145]
+Train Loss:0.0145  Train Acc: 0.9981
+Val Loss:0.0141  Val Acc:0.9981
+test acc 0.912
+Train and val complete in 40m 43s
+EarlyStopping counter: 3 out of 10
+
+100%|███████████████████████████████████████████| 79/79 [00:01<00:00, 49.89it/s]
+Test Loss:0.3864  Test Acc:0.9117
+

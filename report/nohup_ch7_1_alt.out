@@ -1,0 +1,593 @@
+train_loader的batch数量为： 235
+AlexNet(
+  (model): Sequential(
+    (0): Conv2d(1, 96, kernel_size=(11, 11), stride=(4, 4), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (4): ReLU()
+    (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU()
+    (8): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU()
+    (10): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU()
+    (12): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (13): Flatten()
+    (14): Linear(in_features=6400, out_features=4096, bias=True)
+    (15): ReLU()
+    (16): Dropout(p=0.5, inplace=False)
+    (17): Linear(in_features=4096, out_features=4096, bias=True)
+    (18): ReLU()
+    (19): Dropout(p=0.5, inplace=False)
+    (20): Linear(in_features=4096, out_features=10, bias=True)
+  )
+)
+Layer name      Output shape
+Conv2d          torch.Size([1, 96, 54, 54])
+ReLU            torch.Size([1, 96, 54, 54])
+MaxPool2d       torch.Size([1, 96, 26, 26])
+Conv2d          torch.Size([1, 256, 26, 26])
+ReLU            torch.Size([1, 256, 26, 26])
+MaxPool2d       torch.Size([1, 256, 12, 12])
+Conv2d          torch.Size([1, 384, 12, 12])
+ReLU            torch.Size([1, 384, 12, 12])
+Conv2d          torch.Size([1, 384, 12, 12])
+ReLU            torch.Size([1, 384, 12, 12])
+Conv2d          torch.Size([1, 256, 12, 12])
+ReLU            torch.Size([1, 256, 12, 12])
+MaxPool2d       torch.Size([1, 256, 5, 5])
+Flatten         torch.Size([1, 6400])
+Linear          torch.Size([1, 4096])
+ReLU            torch.Size([1, 4096])
+Dropout         torch.Size([1, 4096])
+Linear          torch.Size([1, 4096])
+ReLU            torch.Size([1, 4096])
+Dropout         torch.Size([1, 4096])
+Linear          torch.Size([1, 10])
+Epoch [0/300]: 100%|███████████████████████████████████| 235/235 [00:20<00:00, 11.63it/s, acc=0.629, loss=1]
+Train Loss:1.0039  Train Acc: 0.6290
+Val Loss:0.5160  Val Acc:0.7994
+Train and val complete in 0m 21s
+Epoch [1/300]: 100%|███████████████████████████████| 235/235 [00:20<00:00, 11.61it/s, acc=0.812, loss=0.505]
+Train Loss:0.5052  Train Acc: 0.8116
+Val Loss:0.4242  Val Acc:0.8412
+Train and val complete in 0m 42s
+Epoch [2/300]: 100%|███████████████████████████████| 235/235 [00:20<00:00, 11.42it/s, acc=0.843, loss=0.428]
+Train Loss:0.4284  Train Acc: 0.8428
+Val Loss:0.4022  Val Acc:0.8498
+Train and val complete in 1m 3s
+Epoch [3/300]: 100%|███████████████████████████████| 235/235 [00:20<00:00, 11.26it/s, acc=0.859, loss=0.392]
+Train Loss:0.3925  Train Acc: 0.8588
+Val Loss:0.3394  Val Acc:0.8766
+Train and val complete in 1m 24s
+Epoch [4/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.86it/s, acc=0.867, loss=0.374]
+Train Loss:0.3739  Train Acc: 0.8674
+Val Loss:0.3290  Val Acc:0.8781
+Train and val complete in 1m 46s
+Epoch [5/300]: 100%|████████████████████████████████| 235/235 [00:21<00:00, 10.75it/s, acc=0.87, loss=0.358]
+Train Loss:0.3584  Train Acc: 0.8704
+Val Loss:0.3126  Val Acc:0.8870
+Train and val complete in 2m 9s
+Epoch [6/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.65it/s, acc=0.877, loss=0.347]
+Train Loss:0.3466  Train Acc: 0.8768
+Val Loss:0.3093  Val Acc:0.8897
+Train and val complete in 2m 31s
+Epoch [7/300]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.16it/s, acc=0.879, loss=0.339]
+Train Loss:0.3385  Train Acc: 0.8792
+Val Loss:0.3065  Val Acc:0.8882
+Train and val complete in 2m 55s
+Epoch [8/300]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.16it/s, acc=0.882, loss=0.332]
+Train Loss:0.3316  Train Acc: 0.8819
+Val Loss:0.2957  Val Acc:0.8943
+Train and val complete in 3m 18s
+Epoch [9/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.62it/s, acc=0.883, loss=0.326]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.3262  Train Acc: 0.8834
+Val Loss:0.3034  Val Acc:0.8932
+Train and val complete in 3m 41s
+Epoch [10/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.79it/s, acc=0.883, loss=0.328]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.3281  Train Acc: 0.8829
+Val Loss:0.3049  Val Acc:0.8907
+Train and val complete in 4m 3s
+Epoch [11/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.31it/s, acc=0.885, loss=0.32]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.3204  Train Acc: 0.8852
+Val Loss:0.3070  Val Acc:0.8902
+Train and val complete in 4m 25s
+Epoch [12/300]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.83it/s, acc=0.887, loss=0.317]
+Train Loss:0.3174  Train Acc: 0.8872
+Val Loss:0.2932  Val Acc:0.8940
+Train and val complete in 4m 50s
+Epoch [13/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.66it/s, acc=0.89, loss=0.312]
+Train Loss:0.3123  Train Acc: 0.8900
+Val Loss:0.2875  Val Acc:0.8998
+Train and val complete in 5m 12s
+Epoch [14/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.75it/s, acc=0.89, loss=0.307]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.3075  Train Acc: 0.8902
+Val Loss:0.2943  Val Acc:0.8964
+Train and val complete in 5m 34s
+Epoch [15/300]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.16it/s, acc=0.89, loss=0.308]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.3082  Train Acc: 0.8903
+Val Loss:0.3076  Val Acc:0.8868
+Train and val complete in 5m 58s
+Epoch [16/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.81it/s, acc=0.893, loss=0.304]
+Train Loss:0.3039  Train Acc: 0.8927
+Val Loss:0.2786  Val Acc:0.9009
+Train and val complete in 6m 20s
+Epoch [17/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.41it/s, acc=0.891, loss=0.306]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.3060  Train Acc: 0.8914
+Val Loss:0.2831  Val Acc:0.9003
+Train and val complete in 6m 42s
+Epoch [18/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.71it/s, acc=0.893, loss=0.302]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.3020  Train Acc: 0.8932
+Val Loss:0.2921  Val Acc:0.8982
+Train and val complete in 7m 4s
+Epoch [19/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.99it/s, acc=0.894, loss=0.299]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.2990  Train Acc: 0.8941
+Val Loss:0.2866  Val Acc:0.8987
+Train and val complete in 7m 26s
+Epoch [20/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.47it/s, acc=0.896, loss=0.298]
+EarlyStopping counter: 4 out of 10
+Epoch    21: reducing learning rate of group 0 to 5.0000e-04.
+Train Loss:0.2981  Train Acc: 0.8956
+Val Loss:0.2850  Val Acc:0.8991
+Train and val complete in 7m 48s
+Epoch [21/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.35it/s, acc=0.903, loss=0.273]
+Train Loss:0.2726  Train Acc: 0.9031
+Val Loss:0.2654  Val Acc:0.9064
+Train and val complete in 8m 12s
+Epoch [22/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.44it/s, acc=0.904, loss=0.271]
+Train Loss:0.2714  Train Acc: 0.9035
+Val Loss:0.2608  Val Acc:0.9072
+Train and val complete in 8m 35s
+Epoch [23/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.75it/s, acc=0.905, loss=0.265]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2653  Train Acc: 0.9047
+Val Loss:0.2615  Val Acc:0.9091
+Train and val complete in 8m 57s
+Epoch [24/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.94it/s, acc=0.907, loss=0.264]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2641  Train Acc: 0.9069
+Val Loss:0.2612  Val Acc:0.9070
+Train and val complete in 9m 18s
+Epoch [25/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.90it/s, acc=0.906, loss=0.264]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.2644  Train Acc: 0.9056
+Val Loss:0.2619  Val Acc:0.9078
+Train and val complete in 9m 40s
+Epoch [26/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.71it/s, acc=0.908, loss=0.26]
+Train Loss:0.2605  Train Acc: 0.9083
+Val Loss:0.2572  Val Acc:0.9088
+Train and val complete in 10m 3s
+Epoch [27/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.87it/s, acc=0.906, loss=0.262]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2617  Train Acc: 0.9057
+Val Loss:0.2661  Val Acc:0.9052
+Train and val complete in 10m 24s
+Epoch [28/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.84it/s, acc=0.908, loss=0.259]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2585  Train Acc: 0.9078
+Val Loss:0.2612  Val Acc:0.9082
+Train and val complete in 10m 46s
+Epoch [29/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.30it/s, acc=0.909, loss=0.258]
+Train Loss:0.2583  Train Acc: 0.9093
+Val Loss:0.2550  Val Acc:0.9099
+Train and val complete in 11m 9s
+Epoch [30/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.65it/s, acc=0.91, loss=0.257]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2571  Train Acc: 0.9096
+Val Loss:0.2568  Val Acc:0.9083
+Train and val complete in 11m 32s
+Epoch [31/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.04it/s, acc=0.909, loss=0.257]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2570  Train Acc: 0.9090
+Val Loss:0.2556  Val Acc:0.9095
+Train and val complete in 11m 53s
+Epoch [32/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.73it/s, acc=0.91, loss=0.255]
+Train Loss:0.2551  Train Acc: 0.9096
+Val Loss:0.2531  Val Acc:0.9096
+Train and val complete in 12m 15s
+Epoch [33/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.71it/s, acc=0.912, loss=0.252]
+Train Loss:0.2523  Train Acc: 0.9116
+Val Loss:0.2531  Val Acc:0.9113
+Train and val complete in 12m 38s
+Epoch [34/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.93it/s, acc=0.91, loss=0.254]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2536  Train Acc: 0.9102
+Val Loss:0.2563  Val Acc:0.9088
+Train and val complete in 12m 60s
+Epoch [35/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.71it/s, acc=0.91, loss=0.252]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2517  Train Acc: 0.9100
+Val Loss:0.2534  Val Acc:0.9107
+Train and val complete in 13m 22s
+Epoch [36/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.87it/s, acc=0.911, loss=0.25]
+Train Loss:0.2503  Train Acc: 0.9112
+Val Loss:0.2523  Val Acc:0.9100
+Train and val complete in 13m 44s
+Epoch [37/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.85it/s, acc=0.912, loss=0.249]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2493  Train Acc: 0.9120
+Val Loss:0.2552  Val Acc:0.9096
+Train and val complete in 14m 6s
+Epoch [38/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.28it/s, acc=0.912, loss=0.249]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2494  Train Acc: 0.9117
+Val Loss:0.2549  Val Acc:0.9079
+Train and val complete in 14m 28s
+Epoch [39/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.32it/s, acc=0.913, loss=0.249]
+Train Loss:0.2491  Train Acc: 0.9128
+Val Loss:0.2515  Val Acc:0.9123
+Train and val complete in 14m 52s
+Epoch [40/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.03it/s, acc=0.912, loss=0.247]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2475  Train Acc: 0.9120
+Val Loss:0.2517  Val Acc:0.9119
+Train and val complete in 15m 13s
+Epoch [41/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.62it/s, acc=0.913, loss=0.246]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2460  Train Acc: 0.9131
+Val Loss:0.2578  Val Acc:0.9079
+Train and val complete in 15m 35s
+Epoch [42/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.16it/s, acc=0.912, loss=0.248]
+Train Loss:0.2481  Train Acc: 0.9122
+Val Loss:0.2482  Val Acc:0.9116
+Train and val complete in 15m 57s
+Epoch [43/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.66it/s, acc=0.914, loss=0.245]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2449  Train Acc: 0.9135
+Val Loss:0.2553  Val Acc:0.9101
+Train and val complete in 16m 19s
+Epoch [44/300]: 100%|██████████████████████████████| 235/235 [00:23<00:00, 10.20it/s, acc=0.914, loss=0.246]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2455  Train Acc: 0.9136
+Val Loss:0.2571  Val Acc:0.9096
+Train and val complete in 16m 42s
+Epoch [45/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.09it/s, acc=0.914, loss=0.242]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.2421  Train Acc: 0.9140
+Val Loss:0.2483  Val Acc:0.9112
+Train and val complete in 17m 4s
+Epoch [46/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.66it/s, acc=0.914, loss=0.241]
+EarlyStopping counter: 4 out of 10
+Epoch    47: reducing learning rate of group 0 to 2.5000e-04.
+Train Loss:0.2415  Train Acc: 0.9139
+Val Loss:0.2546  Val Acc:0.9111
+Train and val complete in 17m 26s
+Epoch [47/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.99it/s, acc=0.918, loss=0.231]
+EarlyStopping counter: 5 out of 10
+Train Loss:0.2305  Train Acc: 0.9182
+Val Loss:0.2512  Val Acc:0.9129
+Train and val complete in 17m 47s
+Epoch [48/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.64it/s, acc=0.919, loss=0.227]
+EarlyStopping counter: 6 out of 10
+Train Loss:0.2265  Train Acc: 0.9194
+Val Loss:0.2528  Val Acc:0.9117
+Train and val complete in 18m 9s
+Epoch [49/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.89it/s, acc=0.919, loss=0.226]
+Train Loss:0.2262  Train Acc: 0.9194
+Val Loss:0.2475  Val Acc:0.9125
+Train and val complete in 18m 31s
+Epoch [50/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 11.05it/s, acc=0.92, loss=0.224]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2241  Train Acc: 0.9202
+Val Loss:0.2496  Val Acc:0.9127
+Train and val complete in 18m 53s
+Epoch [51/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.34it/s, acc=0.921, loss=0.223]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2226  Train Acc: 0.9212
+Val Loss:0.2498  Val Acc:0.9122
+Train and val complete in 19m 16s
+Epoch [52/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.77it/s, acc=0.921, loss=0.222]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.2222  Train Acc: 0.9205
+Val Loss:0.2478  Val Acc:0.9116
+Train and val complete in 19m 38s
+Epoch [53/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.03it/s, acc=0.921, loss=0.222]
+EarlyStopping counter: 4 out of 10
+Epoch    54: reducing learning rate of group 0 to 1.2500e-04.
+Train Loss:0.2215  Train Acc: 0.9208
+Val Loss:0.2542  Val Acc:0.9111
+Train and val complete in 19m 59s
+Epoch [54/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.79it/s, acc=0.925, loss=0.209]
+Train Loss:0.2090  Train Acc: 0.9255
+Val Loss:0.2467  Val Acc:0.9107
+Train and val complete in 20m 21s
+Epoch [55/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.24it/s, acc=0.927, loss=0.205]
+Train Loss:0.2045  Train Acc: 0.9270
+Val Loss:0.2439  Val Acc:0.9140
+Train and val complete in 20m 45s
+Epoch [56/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.40it/s, acc=0.927, loss=0.203]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2034  Train Acc: 0.9274
+Val Loss:0.2444  Val Acc:0.9127
+Train and val complete in 21m 8s
+Epoch [57/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.64it/s, acc=0.928, loss=0.202]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2016  Train Acc: 0.9280
+Val Loss:0.2497  Val Acc:0.9118
+Train and val complete in 21m 30s
+Epoch [58/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.72it/s, acc=0.929, loss=0.203]
+Train Loss:0.2030  Train Acc: 0.9289
+Val Loss:0.2392  Val Acc:0.9143
+Train and val complete in 21m 52s
+Epoch [59/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.15it/s, acc=0.929, loss=0.201]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.2010  Train Acc: 0.9288
+Val Loss:0.2448  Val Acc:0.9137
+Train and val complete in 22m 13s
+Epoch [60/300]: 100%|████████████████████████████████| 235/235 [00:21<00:00, 10.92it/s, acc=0.929, loss=0.2]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.2003  Train Acc: 0.9292
+Val Loss:0.2485  Val Acc:0.9126
+Train and val complete in 22m 35s
+Epoch [61/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.80it/s, acc=0.93, loss=0.197]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1968  Train Acc: 0.9295
+Val Loss:0.2423  Val Acc:0.9150
+Train and val complete in 22m 57s
+Epoch [62/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.87it/s, acc=0.929, loss=0.196]
+EarlyStopping counter: 4 out of 10
+Epoch    63: reducing learning rate of group 0 to 6.2500e-05.
+Train Loss:0.1963  Train Acc: 0.9291
+Val Loss:0.2473  Val Acc:0.9131
+Train and val complete in 23m 19s
+Epoch [63/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.79it/s, acc=0.933, loss=0.19]
+Train Loss:0.1903  Train Acc: 0.9333
+Val Loss:0.2291  Val Acc:0.9186
+Train and val complete in 23m 41s
+Epoch [64/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.71it/s, acc=0.933, loss=0.188]
+Train Loss:0.1882  Train Acc: 0.9331
+Val Loss:0.2282  Val Acc:0.9175
+Train and val complete in 24m 3s
+Epoch [65/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.52it/s, acc=0.933, loss=0.187]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1872  Train Acc: 0.9333
+Val Loss:0.2305  Val Acc:0.9180
+Train and val complete in 24m 26s
+Epoch [66/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.79it/s, acc=0.933, loss=0.186]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1858  Train Acc: 0.9332
+Val Loss:0.2305  Val Acc:0.9172
+Train and val complete in 24m 48s
+Epoch [67/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.57it/s, acc=0.935, loss=0.185]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1851  Train Acc: 0.9354
+Val Loss:0.2294  Val Acc:0.9181
+Train and val complete in 25m 10s
+Epoch [68/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.40it/s, acc=0.935, loss=0.183]
+EarlyStopping counter: 4 out of 10
+Epoch    69: reducing learning rate of group 0 to 3.1250e-05.
+Train Loss:0.1830  Train Acc: 0.9350
+Val Loss:0.2287  Val Acc:0.9194
+Train and val complete in 25m 33s
+Epoch [69/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 11.07it/s, acc=0.936, loss=0.18]
+Train Loss:0.1804  Train Acc: 0.9360
+Val Loss:0.2248  Val Acc:0.9190
+Train and val complete in 25m 55s
+Epoch [70/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.91it/s, acc=0.937, loss=0.179]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1791  Train Acc: 0.9372
+Val Loss:0.2266  Val Acc:0.9192
+Train and val complete in 26m 16s
+Epoch [71/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.00it/s, acc=0.936, loss=0.179]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1789  Train Acc: 0.9364
+Val Loss:0.2271  Val Acc:0.9188
+Train and val complete in 26m 38s
+Epoch [72/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.70it/s, acc=0.937, loss=0.178]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1777  Train Acc: 0.9370
+Val Loss:0.2255  Val Acc:0.9196
+Train and val complete in 26m 60s
+Epoch [73/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.66it/s, acc=0.937, loss=0.178]
+EarlyStopping counter: 4 out of 10
+Epoch    74: reducing learning rate of group 0 to 1.5625e-05.
+Train Loss:0.1778  Train Acc: 0.9371
+Val Loss:0.2258  Val Acc:0.9194
+Train and val complete in 27m 22s
+Epoch [74/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.11it/s, acc=0.939, loss=0.173]
+Train Loss:0.1728  Train Acc: 0.9390
+Val Loss:0.2231  Val Acc:0.9206
+Train and val complete in 27m 44s
+Epoch [75/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.65it/s, acc=0.938, loss=0.175]
+Train Loss:0.1754  Train Acc: 0.9379
+Val Loss:0.2224  Val Acc:0.9209
+Train and val complete in 28m 6s
+Epoch [76/300]: 100%|██████████████████████████████| 235/235 [00:20<00:00, 11.21it/s, acc=0.939, loss=0.174]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1740  Train Acc: 0.9394
+Val Loss:0.2225  Val Acc:0.9210
+Train and val complete in 28m 27s
+Epoch [77/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.65it/s, acc=0.939, loss=0.174]
+Train Loss:0.1738  Train Acc: 0.9390
+Val Loss:0.2224  Val Acc:0.9212
+Train and val complete in 28m 50s
+Epoch [78/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.11it/s, acc=0.938, loss=0.173]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1734  Train Acc: 0.9381
+Val Loss:0.2227  Val Acc:0.9207
+Train and val complete in 29m 11s
+Epoch [79/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.35it/s, acc=0.939, loss=0.173]
+EarlyStopping counter: 2 out of 10
+Epoch    80: reducing learning rate of group 0 to 7.8125e-06.
+Train Loss:0.1733  Train Acc: 0.9392
+Val Loss:0.2227  Val Acc:0.9207
+Train and val complete in 29m 34s
+Epoch [80/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.06it/s, acc=0.939, loss=0.173]
+Train Loss:0.1728  Train Acc: 0.9386
+Val Loss:0.2218  Val Acc:0.9210
+Train and val complete in 29m 56s
+Epoch [81/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.64it/s, acc=0.94, loss=0.169]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1695  Train Acc: 0.9403
+Val Loss:0.2220  Val Acc:0.9209
+Train and val complete in 30m 18s
+Epoch [82/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.76it/s, acc=0.939, loss=0.172]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1720  Train Acc: 0.9391
+Val Loss:0.2219  Val Acc:0.9221
+Train and val complete in 30m 40s
+Epoch [83/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.72it/s, acc=0.94, loss=0.169]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1693  Train Acc: 0.9401
+Val Loss:0.2221  Val Acc:0.9213
+Train and val complete in 31m 2s
+Epoch [84/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 11.13it/s, acc=0.94, loss=0.171]
+Train Loss:0.1710  Train Acc: 0.9397
+Val Loss:0.2218  Val Acc:0.9214
+Train and val complete in 31m 24s
+Epoch [85/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.91it/s, acc=0.941, loss=0.17]
+Train Loss:0.1700  Train Acc: 0.9409
+Val Loss:0.2217  Val Acc:0.9215
+Train and val complete in 31m 46s
+Epoch [86/300]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.64it/s, acc=0.939, loss=0.17]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1699  Train Acc: 0.9392
+Val Loss:0.2218  Val Acc:0.9214
+Train and val complete in 32m 8s
+Epoch [87/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.99it/s, acc=0.939, loss=0.171]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1706  Train Acc: 0.9391
+Val Loss:0.2217  Val Acc:0.9219
+Train and val complete in 32m 29s
+Epoch [88/300]: 100%|████████████████████████████████| 235/235 [00:22<00:00, 10.37it/s, acc=0.94, loss=0.17]
+Train Loss:0.1698  Train Acc: 0.9404
+Val Loss:0.2215  Val Acc:0.9212
+Train and val complete in 32m 53s
+Epoch [89/300]: 100%|███████████████████████████████| 235/235 [00:17<00:00, 13.60it/s, acc=0.94, loss=0.169]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1695  Train Acc: 0.9404
+Val Loss:0.2217  Val Acc:0.9215
+Train and val complete in 33m 10s
+Epoch [90/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.28it/s, acc=0.941, loss=0.168]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1677  Train Acc: 0.9406
+Val Loss:0.2217  Val Acc:0.9215
+Train and val complete in 33m 33s
+Epoch [91/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.89it/s, acc=0.941, loss=0.17]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1698  Train Acc: 0.9406
+Val Loss:0.2216  Val Acc:0.9209
+Train and val complete in 33m 55s
+Epoch [92/300]: 100%|███████████████████████████████| 235/235 [00:21<00:00, 10.86it/s, acc=0.94, loss=0.169]
+EarlyStopping counter: 4 out of 10
+Epoch    93: reducing learning rate of group 0 to 3.9063e-06.
+Train Loss:0.1692  Train Acc: 0.9402
+Val Loss:0.2216  Val Acc:0.9209
+Train and val complete in 34m 16s
+Epoch [93/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.50it/s, acc=0.941, loss=0.168]
+Train Loss:0.1685  Train Acc: 0.9407
+Val Loss:0.2213  Val Acc:0.9212
+Train and val complete in 34m 39s
+Epoch [94/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.97it/s, acc=0.941, loss=0.168]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1676  Train Acc: 0.9415
+Val Loss:0.2213  Val Acc:0.9207
+Train and val complete in 35m 1s
+Epoch [95/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.94it/s, acc=0.941, loss=0.167]
+EarlyStopping counter: 2 out of 10
+Train Loss:0.1673  Train Acc: 0.9412
+Val Loss:0.2216  Val Acc:0.9207
+Train and val complete in 35m 22s
+Epoch [96/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.06it/s, acc=0.941, loss=0.167]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1667  Train Acc: 0.9409
+Val Loss:0.2214  Val Acc:0.9209
+Train and val complete in 35m 44s
+Epoch [97/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.64it/s, acc=0.942, loss=0.168]
+EarlyStopping counter: 4 out of 10
+Epoch    98: reducing learning rate of group 0 to 1.9531e-06.
+Train Loss:0.1681  Train Acc: 0.9416
+Val Loss:0.2214  Val Acc:0.9213
+Train and val complete in 36m 6s
+Epoch [98/300]: 100%|██████████████████████████████| 235/235 [00:22<00:00, 10.36it/s, acc=0.941, loss=0.167]
+EarlyStopping counter: 5 out of 10
+Train Loss:0.1671  Train Acc: 0.9411
+Val Loss:0.2213  Val Acc:0.9209
+Train and val complete in 36m 29s
+Epoch [99/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 10.74it/s, acc=0.942, loss=0.166]
+EarlyStopping counter: 6 out of 10
+Train Loss:0.1656  Train Acc: 0.9418
+Val Loss:0.2214  Val Acc:0.9209
+Train and val complete in 36m 51s
+Epoch [100/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.79it/s, acc=0.941, loss=0.168]
+EarlyStopping counter: 7 out of 10
+Train Loss:0.1679  Train Acc: 0.9410
+Val Loss:0.2213  Val Acc:0.9208
+Train and val complete in 37m 13s
+Epoch [101/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 11.06it/s, acc=0.941, loss=0.167]
+EarlyStopping counter: 8 out of 10
+Epoch   102: reducing learning rate of group 0 to 9.7656e-07.
+Train Loss:0.1670  Train Acc: 0.9410
+Val Loss:0.2213  Val Acc:0.9207
+Train and val complete in 37m 34s
+Epoch [102/300]: 100%|██████████████████████████████| 235/235 [00:21<00:00, 11.03it/s, acc=0.94, loss=0.167]
+EarlyStopping counter: 9 out of 10
+Train Loss:0.1674  Train Acc: 0.9403
+Val Loss:0.2213  Val Acc:0.9209
+Train and val complete in 37m 55s
+Epoch [103/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 11.06it/s, acc=0.942, loss=0.166]
+Train Loss:0.1663  Train Acc: 0.9419
+Val Loss:0.2213  Val Acc:0.9211
+Train and val complete in 38m 17s
+Epoch [104/300]: 100%|█████████████████████████████| 235/235 [00:22<00:00, 10.67it/s, acc=0.942, loss=0.168]
+EarlyStopping counter: 1 out of 10
+Train Loss:0.1677  Train Acc: 0.9422
+Val Loss:0.2214  Val Acc:0.9212
+Train and val complete in 38m 39s
+Epoch [105/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.76it/s, acc=0.942, loss=0.167]
+EarlyStopping counter: 2 out of 10
+Epoch   106: reducing learning rate of group 0 to 4.8828e-07.
+Train Loss:0.1666  Train Acc: 0.9417
+Val Loss:0.2213  Val Acc:0.9209
+Train and val complete in 39m 1s
+Epoch [106/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.81it/s, acc=0.942, loss=0.166]
+EarlyStopping counter: 3 out of 10
+Train Loss:0.1658  Train Acc: 0.9417
+Val Loss:0.2214  Val Acc:0.9207
+Train and val complete in 39m 23s
+Epoch [107/300]: 100%|█████████████████████████████| 235/235 [00:22<00:00, 10.54it/s, acc=0.942, loss=0.167]
+EarlyStopping counter: 4 out of 10
+Train Loss:0.1669  Train Acc: 0.9421
+Val Loss:0.2214  Val Acc:0.9210
+Train and val complete in 39m 45s
+Epoch [108/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.99it/s, acc=0.941, loss=0.167]
+EarlyStopping counter: 5 out of 10
+Train Loss:0.1666  Train Acc: 0.9408
+Val Loss:0.2214  Val Acc:0.9207
+Train and val complete in 40m 7s
+Epoch [109/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.76it/s, acc=0.941, loss=0.165]
+EarlyStopping counter: 6 out of 10
+Epoch   110: reducing learning rate of group 0 to 2.4414e-07.
+Train Loss:0.1654  Train Acc: 0.9412
+Val Loss:0.2214  Val Acc:0.9207
+Train and val complete in 40m 29s
+Epoch [110/300]: 100%|█████████████████████████████| 235/235 [00:24<00:00,  9.60it/s, acc=0.943, loss=0.166]
+EarlyStopping counter: 7 out of 10
+Train Loss:0.1662  Train Acc: 0.9426
+Val Loss:0.2214  Val Acc:0.9207
+Train and val complete in 40m 53s
+Epoch [111/300]: 100%|█████████████████████████████| 235/235 [00:23<00:00, 10.09it/s, acc=0.941, loss=0.166]
+EarlyStopping counter: 8 out of 10
+Train Loss:0.1658  Train Acc: 0.9411
+Val Loss:0.2214  Val Acc:0.9207
+Train and val complete in 41m 17s
+Epoch [112/300]: 100%|█████████████████████████████| 235/235 [00:22<00:00, 10.62it/s, acc=0.941, loss=0.166]
+EarlyStopping counter: 9 out of 10
+Train Loss:0.1664  Train Acc: 0.9408
+Val Loss:0.2214  Val Acc:0.9209
+Train and val complete in 41m 39s
+Epoch [113/300]: 100%|█████████████████████████████| 235/235 [00:21<00:00, 10.82it/s, acc=0.941, loss=0.166]
+EarlyStopping counter: 10 out of 10
+Early stopping
+100%|███████████████████████████████████████████████████████████████████████| 40/40 [00:03<00:00, 12.00it/s]
+Val Loss:0.2359  Val Acc:0.9168

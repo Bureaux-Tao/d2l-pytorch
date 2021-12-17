@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9ddcaef0-c2b5-44fd-97e0-32820e57b3ee" name="Torch-Project" url="">
+        <fileTransfer accessType="SFTP" host="172.30.2.148" port="22" sshConfigId="872cabfb-8275-4df1-b1cf-3a49481268de" sshConfig="bureaux@172.30.2.148:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

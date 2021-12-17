@@ -1,0 +1,167 @@
+Reshape output shape: 	 torch.Size([1, 1, 28, 28])
+Conv2d output shape: 	 torch.Size([1, 6, 28, 28])
+Sigmoid output shape: 	 torch.Size([1, 6, 28, 28])
+AvgPool2d output shape: 	 torch.Size([1, 6, 14, 14])
+Conv2d output shape: 	 torch.Size([1, 16, 10, 10])
+Sigmoid output shape: 	 torch.Size([1, 16, 10, 10])
+AvgPool2d output shape: 	 torch.Size([1, 16, 5, 5])
+Flatten output shape: 	 torch.Size([1, 400])
+Linear output shape: 	 torch.Size([1, 120])
+Sigmoid output shape: 	 torch.Size([1, 120])
+Linear output shape: 	 torch.Size([1, 84])
+Sigmoid output shape: 	 torch.Size([1, 84])
+Linear output shape: 	 torch.Size([1, 10])
+training on cpu
+Epoch [0/50]: 100%|██████████| 1875/1875 [00:16<00:00, 115.04it/s, acc=0.177, loss=2.17]
+loss 2.166, train acc 0.177, test acc 0.560
+210538.3 examples/sec on cpu
+Epoch [1/50]: 100%|██████████| 1875/1875 [00:15<00:00, 121.93it/s, acc=0.632, loss=0.963]
+loss 0.963, train acc 0.632, test acc 0.696
+107480.5 examples/sec on cpu
+Epoch [2/50]: 100%|██████████| 1875/1875 [00:18<00:00, 102.59it/s, acc=0.716, loss=0.742]
+loss 0.742, train acc 0.716, test acc 0.701
+67972.2 examples/sec on cpu
+Epoch [3/50]: 100%|██████████| 1875/1875 [00:15<00:00, 118.50it/s, acc=0.747, loss=0.653]
+loss 0.653, train acc 0.747, test acc 0.751
+51547.1 examples/sec on cpu
+Epoch [4/50]: 100%|██████████| 1875/1875 [00:15<00:00, 124.86it/s, acc=0.769, loss=0.603]
+loss 0.603, train acc 0.769, test acc 0.770
+41922.7 examples/sec on cpu
+Epoch [5/50]: 100%|██████████| 1875/1875 [00:14<00:00, 129.85it/s, acc=0.787, loss=0.564]
+loss 0.564, train acc 0.787, test acc 0.794
+35548.6 examples/sec on cpu
+Epoch [6/50]: 100%|██████████| 1875/1875 [00:15<00:00, 122.81it/s, acc=0.8, loss=0.53]
+loss 0.530, train acc 0.800, test acc 0.804
+30632.2 examples/sec on cpu
+Epoch [7/50]: 100%|██████████| 1875/1875 [00:14<00:00, 125.44it/s, acc=0.813, loss=0.501]
+loss 0.501, train acc 0.813, test acc 0.810
+26984.0 examples/sec on cpu
+Epoch [8/50]: 100%|██████████| 1875/1875 [00:15<00:00, 120.84it/s, acc=0.824, loss=0.476]
+loss 0.476, train acc 0.824, test acc 0.791
+24008.9 examples/sec on cpu
+Epoch [9/50]: 100%|██████████| 1875/1875 [00:15<00:00, 124.73it/s, acc=0.831, loss=0.457]
+loss 0.457, train acc 0.831, test acc 0.829
+21694.1 examples/sec on cpu
+Epoch [10/50]: 100%|██████████| 1875/1875 [00:14<00:00, 126.70it/s, acc=0.839, loss=0.438]
+loss 0.438, train acc 0.839, test acc 0.835
+19809.0 examples/sec on cpu
+Epoch [11/50]: 100%|██████████| 1875/1875 [00:14<00:00, 127.48it/s, acc=0.844, loss=0.425]
+loss 0.425, train acc 0.844, test acc 0.835
+18234.9 examples/sec on cpu
+Epoch [12/50]: 100%|██████████| 1875/1875 [00:17<00:00, 107.22it/s, acc=0.848, loss=0.412]
+loss 0.412, train acc 0.848, test acc 0.846
+16677.7 examples/sec on cpu
+Epoch [13/50]: 100%|██████████| 1875/1875 [00:25<00:00, 74.80it/s, acc=0.852, loss=0.401]
+loss 0.401, train acc 0.852, test acc 0.847
+14898.6 examples/sec on cpu
+Epoch [14/50]: 100%|██████████| 1875/1875 [00:16<00:00, 115.43it/s, acc=0.855, loss=0.391]
+loss 0.391, train acc 0.855, test acc 0.851
+13902.6 examples/sec on cpu
+Epoch [15/50]: 100%|██████████| 1875/1875 [00:15<00:00, 118.00it/s, acc=0.858, loss=0.38]
+loss 0.380, train acc 0.858, test acc 0.847
+13050.3 examples/sec on cpu
+Epoch [16/50]: 100%|██████████| 1875/1875 [00:24<00:00, 75.23it/s, acc=0.861, loss=0.373]
+loss 0.373, train acc 0.861, test acc 0.858
+11975.9 examples/sec on cpu
+Epoch [17/50]: 100%|██████████| 1875/1875 [00:26<00:00, 70.88it/s, acc=0.865, loss=0.364]
+loss 0.364, train acc 0.865, test acc 0.851
+10983.1 examples/sec on cpu
+Epoch [18/50]: 100%|██████████| 1875/1875 [00:20<00:00, 93.12it/s, acc=0.868, loss=0.357]
+loss 0.357, train acc 0.868, test acc 0.862
+10318.1 examples/sec on cpu
+Epoch [19/50]: 100%|██████████| 1875/1875 [00:26<00:00, 71.29it/s, acc=0.871, loss=0.35]
+loss 0.350, train acc 0.871, test acc 0.862
+9571.0 examples/sec on cpu
+Epoch [20/50]: 100%|██████████| 1875/1875 [00:16<00:00, 114.23it/s, acc=0.873, loss=0.344]
+loss 0.344, train acc 0.873, test acc 0.856
+9146.2 examples/sec on cpu
+Epoch [21/50]: 100%|██████████| 1875/1875 [00:22<00:00, 83.66it/s, acc=0.876, loss=0.336]
+loss 0.336, train acc 0.876, test acc 0.863
+8636.1 examples/sec on cpu
+Epoch [22/50]: 100%|██████████| 1875/1875 [00:19<00:00, 98.00it/s, acc=0.877, loss=0.332]
+loss 0.332, train acc 0.877, test acc 0.865
+8235.2 examples/sec on cpu
+Epoch [23/50]: 100%|██████████| 1875/1875 [00:30<00:00, 61.09it/s, acc=0.878, loss=0.328]
+loss 0.328, train acc 0.878, test acc 0.871
+7679.3 examples/sec on cpu
+Epoch [24/50]: 100%|██████████| 1875/1875 [00:17<00:00, 104.28it/s, acc=0.88, loss=0.323]
+loss 0.323, train acc 0.880, test acc 0.865
+7378.2 examples/sec on cpu
+Epoch [25/50]: 100%|██████████| 1875/1875 [00:24<00:00, 78.04it/s, acc=0.882, loss=0.318]
+loss 0.318, train acc 0.882, test acc 0.872
+7012.6 examples/sec on cpu
+Epoch [26/50]: 100%|██████████| 1875/1875 [00:23<00:00, 79.10it/s, acc=0.883, loss=0.314]
+loss 0.314, train acc 0.883, test acc 0.875
+6693.5 examples/sec on cpu
+Epoch [27/50]: 100%|██████████| 1875/1875 [00:17<00:00, 104.94it/s, acc=0.885, loss=0.309]
+loss 0.309, train acc 0.885, test acc 0.867
+6468.7 examples/sec on cpu
+Epoch [28/50]: 100%|██████████| 1875/1875 [00:19<00:00, 94.94it/s, acc=0.886, loss=0.306]
+loss 0.306, train acc 0.886, test acc 0.871
+6237.7 examples/sec on cpu
+Epoch [29/50]: 100%|██████████| 1875/1875 [00:15<00:00, 120.09it/s, acc=0.887, loss=0.303]
+loss 0.303, train acc 0.887, test acc 0.878
+6063.7 examples/sec on cpu
+Epoch [30/50]: 100%|██████████| 1875/1875 [00:18<00:00, 102.93it/s, acc=0.889, loss=0.299]
+loss 0.299, train acc 0.889, test acc 0.879
+5872.1 examples/sec on cpu
+Epoch [31/50]: 100%|██████████| 1875/1875 [00:16<00:00, 111.36it/s, acc=0.891, loss=0.295]
+loss 0.295, train acc 0.891, test acc 0.882
+5706.1 examples/sec on cpu
+Epoch [32/50]: 100%|██████████| 1875/1875 [00:16<00:00, 115.56it/s, acc=0.891, loss=0.291]
+loss 0.291, train acc 0.891, test acc 0.880
+5554.1 examples/sec on cpu
+Epoch [33/50]: 100%|██████████| 1875/1875 [00:19<00:00, 95.69it/s, acc=0.893, loss=0.289]
+loss 0.289, train acc 0.893, test acc 0.880
+5380.8 examples/sec on cpu
+Epoch [34/50]: 100%|██████████| 1875/1875 [00:21<00:00, 85.40it/s, acc=0.894, loss=0.286]
+loss 0.286, train acc 0.894, test acc 0.878
+5201.9 examples/sec on cpu
+Epoch [35/50]: 100%|██████████| 1875/1875 [00:20<00:00, 92.84it/s, acc=0.894, loss=0.283]
+  0%|          | 0/1875 [00:00<?, ?it/s]loss 0.283, train acc 0.894, test acc 0.878
+5047.0 examples/sec on cpu
+Epoch [36/50]: 100%|██████████| 1875/1875 [00:22<00:00, 84.25it/s, acc=0.895, loss=0.28]
+loss 0.280, train acc 0.895, test acc 0.875
+4886.3 examples/sec on cpu
+Epoch [37/50]: 100%|██████████| 1875/1875 [00:20<00:00, 90.10it/s, acc=0.896, loss=0.278]
+loss 0.278, train acc 0.896, test acc 0.882
+4744.7 examples/sec on cpu
+Epoch [38/50]: 100%|██████████| 1875/1875 [00:15<00:00, 124.70it/s, acc=0.897, loss=0.274]
+loss 0.274, train acc 0.897, test acc 0.875
+4646.6 examples/sec on cpu
+Epoch [39/50]: 100%|██████████| 1875/1875 [00:18<00:00, 99.21it/s, acc=0.899, loss=0.273]
+loss 0.273, train acc 0.899, test acc 0.883
+4529.1 examples/sec on cpu
+Epoch [40/50]: 100%|██████████| 1875/1875 [00:27<00:00, 67.04it/s, acc=0.899, loss=0.269]
+loss 0.269, train acc 0.899, test acc 0.879
+4373.2 examples/sec on cpu
+Epoch [41/50]: 100%|██████████| 1875/1875 [00:19<00:00, 94.00it/s, acc=0.9, loss=0.267]
+loss 0.267, train acc 0.900, test acc 0.886
+4264.2 examples/sec on cpu
+Epoch [42/50]: 100%|██████████| 1875/1875 [00:17<00:00, 104.30it/s, acc=0.902, loss=0.264]
+loss 0.264, train acc 0.902, test acc 0.890
+4171.0 examples/sec on cpu
+Epoch [43/50]: 100%|██████████| 1875/1875 [00:22<00:00, 84.75it/s, acc=0.902, loss=0.263]
+loss 0.263, train acc 0.902, test acc 0.893
+4062.5 examples/sec on cpu
+Epoch [44/50]: 100%|██████████| 1875/1875 [00:21<00:00, 87.52it/s, acc=0.903, loss=0.26]
+loss 0.260, train acc 0.903, test acc 0.891
+3962.2 examples/sec on cpu
+Epoch [45/50]: 100%|██████████| 1875/1875 [00:26<00:00, 72.03it/s, acc=0.904, loss=0.258]
+loss 0.258, train acc 0.904, test acc 0.890
+3850.1 examples/sec on cpu
+Epoch [46/50]: 100%|██████████| 1875/1875 [00:16<00:00, 114.11it/s, acc=0.905, loss=0.256]
+loss 0.256, train acc 0.905, test acc 0.887
+3779.8 examples/sec on cpu
+Epoch [47/50]: 100%|██████████| 1875/1875 [00:14<00:00, 127.98it/s, acc=0.905, loss=0.253]
+loss 0.253, train acc 0.905, test acc 0.888
+3718.8 examples/sec on cpu
+Epoch [48/50]: 100%|██████████| 1875/1875 [00:15<00:00, 123.45it/s, acc=0.906, loss=0.252]
+loss 0.252, train acc 0.906, test acc 0.896
+3657.6 examples/sec on cpu
+Epoch [49/50]: 100%|██████████| 1875/1875 [00:15<00:00, 119.43it/s, acc=0.907, loss=0.25]
+loss 0.250, train acc 0.907, test acc 0.893
+3596.4 examples/sec on cpu
+-------------Test Set Evaluation----------
+loss 0.250, train acc 0.907, test acc 0.893
+3596.4 examples/sec on cpu

@@ -1,0 +1,155 @@
+training on cuda:0
+Epoch [0/50]: 100%|█████████████████████████████████| 235/235 [00:19<00:00, 12.10it/s, acc=0.506, loss=1.33]
+loss 1.330, train acc 0.506, test acc 0.776
+175116.4 examples/sec on cuda:0
+Epoch [1/50]: 100%|████████████████████████████████| 235/235 [00:19<00:00, 12.28it/s, acc=0.805, loss=0.514]
+loss 0.514, train acc 0.805, test acc 0.830
+88230.6 examples/sec on cuda:0
+Epoch [2/50]: 100%|████████████████████████████████| 235/235 [00:19<00:00, 12.19it/s, acc=0.852, loss=0.398]
+loss 0.398, train acc 0.852, test acc 0.841
+58830.9 examples/sec on cuda:0
+Epoch [3/50]: 100%|█████████████████████████████████| 235/235 [00:19<00:00, 12.19it/s, acc=0.87, loss=0.348]
+loss 0.348, train acc 0.870, test acc 0.861
+44110.7 examples/sec on cuda:0
+Epoch [4/50]: 100%|█████████████████████████████████| 235/235 [00:19<00:00, 12.12it/s, acc=0.88, loss=0.317]
+loss 0.317, train acc 0.880, test acc 0.882
+35257.0 examples/sec on cuda:0
+Epoch [5/50]: 100%|████████████████████████████████| 235/235 [00:19<00:00, 12.04it/s, acc=0.891, loss=0.292]
+loss 0.292, train acc 0.891, test acc 0.873
+29334.8 examples/sec on cuda:0
+Epoch [6/50]: 100%|████████████████████████████████| 235/235 [00:20<00:00, 11.69it/s, acc=0.895, loss=0.278]
+loss 0.278, train acc 0.895, test acc 0.893
+24957.2 examples/sec on cuda:0
+Epoch [7/50]: 100%|████████████████████████████████| 235/235 [00:21<00:00, 11.11it/s, acc=0.901, loss=0.261]
+loss 0.261, train acc 0.901, test acc 0.864
+21578.4 examples/sec on cuda:0
+Epoch [8/50]: 100%|████████████████████████████████| 235/235 [00:22<00:00, 10.58it/s, acc=0.907, loss=0.246]
+loss 0.246, train acc 0.907, test acc 0.904
+18879.1 examples/sec on cuda:0
+Epoch [9/50]: 100%|████████████████████████████████| 235/235 [00:22<00:00, 10.59it/s, acc=0.913, loss=0.233]
+loss 0.233, train acc 0.913, test acc 0.884
+16784.3 examples/sec on cuda:0
+Epoch [10/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.63it/s, acc=0.917, loss=0.223]
+loss 0.223, train acc 0.917, test acc 0.834
+15113.8 examples/sec on cuda:0
+Epoch [11/50]: 100%|████████████████████████████████| 235/235 [00:22<00:00, 10.43it/s, acc=0.922, loss=0.21]
+loss 0.210, train acc 0.922, test acc 0.904
+13734.6 examples/sec on cuda:0
+Epoch [12/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.35it/s, acc=0.925, loss=0.199]
+loss 0.199, train acc 0.925, test acc 0.900
+12572.6 examples/sec on cuda:0
+Epoch [13/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.18it/s, acc=0.929, loss=0.189]
+loss 0.189, train acc 0.929, test acc 0.906
+11566.1 examples/sec on cuda:0
+Epoch [14/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.33it/s, acc=0.933, loss=0.179]
+loss 0.179, train acc 0.933, test acc 0.912
+10721.1 examples/sec on cuda:0
+Epoch [15/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00,  9.92it/s, acc=0.934, loss=0.173]
+loss 0.173, train acc 0.934, test acc 0.910
+9954.2 examples/sec on cuda:0
+Epoch [16/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.33it/s, acc=0.938, loss=0.162]
+loss 0.162, train acc 0.938, test acc 0.909
+9318.2 examples/sec on cuda:0
+Epoch [17/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.11it/s, acc=0.942, loss=0.154]
+loss 0.154, train acc 0.942, test acc 0.917
+8751.6 examples/sec on cuda:0
+Epoch [18/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.33it/s, acc=0.946, loss=0.141]
+loss 0.141, train acc 0.946, test acc 0.912
+8265.0 examples/sec on cuda:0
+Epoch [19/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.28it/s, acc=0.948, loss=0.135]
+loss 0.135, train acc 0.948, test acc 0.911
+7822.7 examples/sec on cuda:0
+Epoch [20/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.11it/s, acc=0.952, loss=0.128]
+loss 0.128, train acc 0.952, test acc 0.892
+7419.1 examples/sec on cuda:0
+Epoch [21/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00,  9.91it/s, acc=0.955, loss=0.119]
+loss 0.119, train acc 0.955, test acc 0.906
+7049.5 examples/sec on cuda:0
+Epoch [22/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.22it/s, acc=0.958, loss=0.112]
+loss 0.112, train acc 0.958, test acc 0.890
+6724.8 examples/sec on cuda:0
+Epoch [23/50]: 100%|████████████████████████████████| 235/235 [00:22<00:00, 10.22it/s, acc=0.96, loss=0.105]
+loss 0.105, train acc 0.960, test acc 0.909
+6428.7 examples/sec on cuda:0
+Epoch [24/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.85it/s, acc=0.964, loss=0.0951]
+loss 0.095, train acc 0.964, test acc 0.918
+6143.8 examples/sec on cuda:0
+Epoch [25/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.82it/s, acc=0.966, loss=0.0901]
+loss 0.090, train acc 0.966, test acc 0.920
+5886.4 examples/sec on cuda:0
+Epoch [26/50]: 100%|███████████████████████████████| 235/235 [00:23<00:00, 10.19it/s, acc=0.97, loss=0.0816]
+loss 0.082, train acc 0.970, test acc 0.919
+5657.0 examples/sec on cuda:0
+Epoch [27/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.99it/s, acc=0.972, loss=0.0756]
+loss 0.076, train acc 0.972, test acc 0.921
+5438.4 examples/sec on cuda:0
+Epoch [28/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00, 10.03it/s, acc=0.974, loss=0.0703]
+loss 0.070, train acc 0.974, test acc 0.916
+5238.9 examples/sec on cuda:0
+Epoch [29/50]: 100%|███████████████████████████████| 235/235 [00:22<00:00, 10.25it/s, acc=0.976, loss=0.063]
+loss 0.063, train acc 0.976, test acc 0.923
+5056.4 examples/sec on cuda:0
+Epoch [30/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.81it/s, acc=0.978, loss=0.0579]
+loss 0.058, train acc 0.978, test acc 0.917
+4878.2 examples/sec on cuda:0
+Epoch [31/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00, 10.03it/s, acc=0.979, loss=0.0549]
+loss 0.055, train acc 0.979, test acc 0.923
+4717.3 examples/sec on cuda:0
+Epoch [32/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00, 10.01it/s, acc=0.981, loss=0.0516]
+loss 0.052, train acc 0.981, test acc 0.906
+4565.4 examples/sec on cuda:0
+Epoch [33/50]: 100%|██████████████████████████████| 235/235 [00:23<00:00,  9.87it/s, acc=0.983, loss=0.0464]
+loss 0.046, train acc 0.983, test acc 0.923
+4425.4 examples/sec on cuda:0
+Epoch [34/50]: 100%|███████████████████████████████| 235/235 [00:25<00:00,  9.33it/s, acc=0.984, loss=0.044]
+loss 0.044, train acc 0.984, test acc 0.921
+4290.1 examples/sec on cuda:0
+Epoch [35/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.14it/s, acc=0.985, loss=0.0404]
+loss 0.040, train acc 0.985, test acc 0.907
+4160.1 examples/sec on cuda:0
+Epoch [36/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.21it/s, acc=0.987, loss=0.0363]
+loss 0.036, train acc 0.987, test acc 0.913
+4039.7 examples/sec on cuda:0
+Epoch [37/50]: 100%|██████████████████████████████| 235/235 [00:26<00:00,  8.95it/s, acc=0.987, loss=0.0355]
+loss 0.035, train acc 0.987, test acc 0.916
+3923.0 examples/sec on cuda:0
+Epoch [38/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.17it/s, acc=0.989, loss=0.0313]
+loss 0.031, train acc 0.989, test acc 0.905
+3814.7 examples/sec on cuda:0
+Epoch [39/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.31it/s, acc=0.988, loss=0.0318]
+loss 0.032, train acc 0.988, test acc 0.919
+3714.4 examples/sec on cuda:0
+Epoch [40/50]: 100%|████████████████████████████████| 235/235 [00:28<00:00,  8.36it/s, acc=0.99, loss=0.026]
+loss 0.026, train acc 0.990, test acc 0.918
+3606.9 examples/sec on cuda:0
+Epoch [41/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.26it/s, acc=0.992, loss=0.0239]
+loss 0.024, train acc 0.992, test acc 0.922
+3516.9 examples/sec on cuda:0
+Epoch [42/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.11it/s, acc=0.992, loss=0.0241]
+loss 0.024, train acc 0.992, test acc 0.923
+3429.1 examples/sec on cuda:0
+Epoch [43/50]: 100%|██████████████████████████████| 235/235 [00:26<00:00,  8.85it/s, acc=0.992, loss=0.0211]
+loss 0.021, train acc 0.992, test acc 0.922
+3342.4 examples/sec on cuda:0
+Epoch [44/50]: 100%|██████████████████████████████| 235/235 [00:26<00:00,  8.71it/s, acc=0.993, loss=0.0203]
+loss 0.020, train acc 0.993, test acc 0.920
+3259.6 examples/sec on cuda:0
+Epoch [45/50]: 100%|██████████████████████████████| 235/235 [00:26<00:00,  8.90it/s, acc=0.993, loss=0.0188]
+loss 0.019, train acc 0.993, test acc 0.917
+3182.2 examples/sec on cuda:0
+Epoch [46/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.09it/s, acc=0.992, loss=0.0213]
+loss 0.021, train acc 0.992, test acc 0.922
+3109.8 examples/sec on cuda:0
+Epoch [47/50]: 100%|████████████████████████████████| 235/235 [00:25<00:00,  9.10it/s, acc=0.993, loss=0.02]
+loss 0.020, train acc 0.993, test acc 0.914
+3040.7 examples/sec on cuda:0
+Epoch [48/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.07it/s, acc=0.995, loss=0.0156]
+loss 0.016, train acc 0.995, test acc 0.926
+2975.3 examples/sec on cuda:0
+Epoch [49/50]: 100%|██████████████████████████████| 235/235 [00:25<00:00,  9.22it/s, acc=0.995, loss=0.0145]
+loss 0.014, train acc 0.995, test acc 0.924
+2913.1 examples/sec on cuda:0
+
+-------------Test Set Evaluation----------
+loss 0.014, train acc 0.995, test acc 0.924
+2913.1 examples/sec on cuda:0
