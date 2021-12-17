@@ -94,9 +94,9 @@
 │   │   └── ch10_4.py              Bahdanau注意力
 │   └── ch9
 │       ├── __init__.py
-│       ├── ch9_5.py                     编码解码器
-│       └── ch9_7.py                     英法互译任务
-└── weights                                    保存的权重
+│       ├── ch9_5.py               编码解码器
+│       └── ch9_7.py               英法互译任务
+└── weights                        保存的权重
     ├── FashionMinist_pln.ckpt
     ├── Inception.pt
     ├── alex_net.pt
